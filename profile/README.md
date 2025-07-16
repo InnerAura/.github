@@ -30,7 +30,6 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
     src="../assets/thematic-break.svg"
     alt="Thematic Break"
     width="100%"
-    height="50"
     role="separator"
     aria-label="InnerAurora Labs organizational divider"
     style="margin: 1em 0; display: block;">

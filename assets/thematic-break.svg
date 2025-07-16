@@ -1,34 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4" viewBox="0 0 1000 4"
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4" viewBox="0 0 1000 6"
      role="separator" aria-label="InnerAurora organizational divider">
     <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="auroraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" style="stop-color:#FF0A54" />
             <stop offset="25%" style="stop-color:#FF477E" />
             <stop offset="50%" style="stop-color:#0AFFEF" />
             <stop offset="75%" style="stop-color:#845EF7" />
             <stop offset="100%" style="stop-color:#B5179E" />
         </linearGradient>
-        Copy<filter id="dividerGlow">
-            <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+        <filter id="mobileGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
             <feMerge>
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
     </defs>
-    <rect width="100%" height="4" fill="url(#grad1)" filter="url(#dividerGlow)">
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s"
+    <!-- Main gradient bar -->
+    <rect width="100%" height="6" fill="url(#auroraGrad)" filter="url(#mobileGlow)"
+          opacity="0.9" />
+    <!-- Static highlight bands for mobile -->
+    <rect x="0" y="0" width="100%" height="2" fill="#FFFFFF" opacity="0.2" />
+    <rect x="0" y="4" width="100%" height="2" fill="#000000" opacity="0.1" />
+    <!-- Simplified pulse elements -->
+    <ellipse cx="200" cy="3" rx="40" ry="2" fill="#FFFFFF" opacity="0.3">
+        <animate attributeName="cx" values="0;1000;0" dur="20s"
                  repeatCount="indefinite" />
-    </rect>
-    <!-- Subtle pulses -->
-    <circle r="1" fill="#FFFFFF" opacity="0.6">
-        <animateMotion path="M 0 2 L 1000 2" dur="8s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s"
+        <animate attributeName="opacity" values="0;0.5;0" dur="20s"
                  repeatCount="indefinite" />
-    </circle>
-    <circle r="0.8" fill="#FFFFFF" opacity="0.5">
-        <animateMotion path="M 1000 2 L 0 2" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s"
+    </ellipse>
+    <ellipse cx="800" cy="3" rx="30" ry="2" fill="#FFFFFF" opacity="0.3">
+        <animate attributeName="cx" values="1000;0;1000" dur="15s"
                  repeatCount="indefinite" />
-    </circle>
+        <animate attributeName="opacity" values="0;0.4;0" dur="15s"
+                 repeatCount="indefinite" />
+    </ellipse>
 </svg>

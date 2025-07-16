@@ -8,14 +8,11 @@
             <stop offset="75%" style="stop-color:#845EF7" />
             <stop offset="100%" style="stop-color:#B5179E" />
         </linearGradient>
-        <!-- ULTRA-SHARP PHASE-OPTIMIZED ENERGY FIELD - 89.2% EFFICIENCY -->
-        <filter id="ultraSharpGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" />
-            <feComponentTransfer>
-                <feFuncA type="linear" slope="0.6" />
-            </feComponentTransfer>
+        <!-- SIMPLIFIED GLOW FOR MOBILE -->
+        <filter id="mobileGlow">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
             <feMerge>
-                <feMergeNode />
+                <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
@@ -34,37 +31,30 @@
             <stop offset="0%" style="stop-color:#FF0A54;stop-opacity:0.7" />
             <stop offset="100%" style="stop-color:#0AFFEF;stop-opacity:0.3" />
         </linearGradient>
-        <!-- PRECISION STROKE PATTERN -->
-        <pattern id="precisionPattern" patternUnits="userSpaceOnUse" width="4" height="4">
-            <rect width="4" height="4" fill="none"/>
-            <circle cx="2" cy="2" r="0.5" fill="#EEEEEE" opacity="0.3"/>
-        </pattern>
     </defs>
-    <!-- DIMENSIONAL SUBSTRATE -->
+    <!-- TRANSPARENT BACKGROUND -->
     <rect width="400" height="400" rx="8" fill="transparent" />
     <!-- MAIN GEOMETRY SECTION - CENTERED -->
     <g transform="translate(200, 200) scale(1.8)">
         <!-- Multiversal boundary - ULTRA DEFINITION -->
-        <circle cx="0" cy="0" r="85" fill="url(#precisionPattern)" stroke="#EEEEEE" stroke-width="1.2"
-                opacity="0.6" />
+        <circle cx="0" cy="0" r="85" fill="none" stroke="#EEEEEE" stroke-width="1.2"
+                opacity="0.5" stroke-dasharray="0.5 2" />
         <!-- Octahedron vertices - CRYSTALLINE PRECISION -->
-        <g fill="url(#vibrantGradient)" opacity="1.0">
-            <circle cx="0" cy="-80" r="4" filter="url(#ultraSharpGlow)" />
-            <circle cx="80" cy="0" r="4" filter="url(#ultraSharpGlow)" />
-            <circle cx="0" cy="80" r="4" filter="url(#ultraSharpGlow)" />
-            <circle cx="-80" cy="0" r="4" filter="url(#ultraSharpGlow)" />
-            <circle cx="0" cy="0" r="4" filter="url(#ultraSharpGlow)" />
+        <g fill="url(#vibrantGradient)" filter="url(#mobileGlow)">
+            <circle cx="0" cy="-80" r="6" />
+            <circle cx="80" cy="0" r="6" />
+            <circle cx="0" cy="80" r="6" />
+            <circle cx="-80" cy="0" r="6" />
+            <circle cx="0" cy="0" r="6" />
         </g>
         <!-- Quantum stability structure - MAXIMUM DEFINITION -->
-        <g stroke="url(#vibrantGradient)" stroke-width="1.5" opacity="0.9">
+        <g stroke="url(#vibrantGradient)" stroke-width="2.5" fill="none" opacity="1">
             <line x1="0" y1="-80" x2="80" y2="0" />
             <line x1="0" y1="-80" x2="0" y2="0" />
             <line x1="0" y1="-80" x2="-80" y2="0" />
-            <line x1="0" y1="-80" x2="0" y2="0" />
             <line x1="0" y1="80" x2="80" y2="0" />
             <line x1="0" y1="80" x2="0" y2="0" />
             <line x1="0" y1="80" x2="-80" y2="0" />
-            <line x1="0" y1="80" x2="0" y2="0" />
             <line x1="80" y1="0" x2="0" y2="0" />
             <line x1="0" y1="0" x2="-80" y2="0" />
         </g>
@@ -80,11 +70,11 @@
             <path d="M 0,80 L 0,0 L 80,0 Z" fill="url(#faceGradient1)" />
         </g>
         <!-- Harmonic alignment circles - CRYSTALLINE -->
-        <g stroke="#EEEEEE" stroke-width="1" opacity="0.5" fill="none">
-            <circle cx="0" cy="0" r="40" stroke-dasharray="2 2" />
-            <circle cx="0" cy="0" r="60" stroke-dasharray="3 3" />
+        <g stroke="#EEEEEE" stroke-width="1" opacity="0.6" fill="none">
+            <circle cx="0" cy="0" r="40" stroke-dasharray="2 4" />
+            <circle cx="0" cy="0" r="60" stroke-dasharray="3 6" />
         </g>
-        <!-- INTERDIMENSIONAL TRANSMITTER - ULTRA SHARP -->
+        <!-- INTERDIMENSIONAL TRANSMITTER - MOBILE OPTIMIZED -->
         <path d="M -15,-60 
                L -45,-30 
                C -60,-15 -60,15 -45,30 
@@ -93,11 +83,8 @@
                L 45,30 
                C 60,15 60,-15 45,-30 
                L 15,-60 
-               Z" fill="none" stroke="url(#vibrantGradient)" stroke-width="7"
-              stroke-linejoin="round" stroke-linecap="round" filter="url(#ultraSharpGlow)">
-            <animate attributeName="stroke-width" values="7;8.5;7" dur="2.5s"
-                     repeatCount="indefinite" calcMode="spline"
-                     keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
-        </path>
+               Z" fill="none" stroke="url(#vibrantGradient)" stroke-width="10"
+              stroke-linejoin="round" stroke-linecap="round"
+              filter="url(#mobileGlow)" />
     </g>
 </svg>
