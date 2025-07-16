@@ -30,10 +30,10 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
     src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/thematic-break.svg"
     alt="Thematic Break"
     width="100%"
-    height="80"
+    height="auto"
     role="separator"
     aria-label="InnerAurora Labs organizational divider"
-    style="margin: 1em 0; display: block;">
+    style="margin: 1em 0; display: block; max-width: 100%;">
 
 <!-- REFERENCE LINKS -->
 [hyperweave-mcp]: https://github.com/InnerAurora/hyperweave-mcp
