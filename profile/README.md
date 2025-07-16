@@ -1,4 +1,4 @@
-[<img src="../assets/icon.svg" align="left" width="140">](https://innerauroralab.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/icon.svg" align="left" width="140">](https://innerauroralab.com)
 
 ## InnerAurora Labs
 
@@ -27,7 +27,7 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 - <img src="../assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
 
 <img 
-    src="../assets/thematic-break.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/thematic-break.svg"
     alt="Thematic Break"
     width="100%"
     role="separator"
