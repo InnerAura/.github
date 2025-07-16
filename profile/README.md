@@ -37,5 +37,5 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 
 <!-- REFERENCE LINKS -->
 [hyperweave-mcp]: https://github.com/InnerAurora/hyperweave-mcp
-[discord]: https://discord.gg/hyperweave.app
-[x]: https://x.com/hyperweave_app
+[discord]: https://discord.gg/xmQCedNN
+[x]: https://x.com/hyperweave_ai
