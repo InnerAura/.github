@@ -1,4 +1,4 @@
-[<img src="assets/icon.svg" align="left" width="140">](https://innerauroralab.com)
+[<img src="../assets/icon.svg" align="left" width="140">](https://innerauroralab.com)
 
 ## InnerAurora Labs
 
@@ -22,12 +22,12 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 -->
 
 **Get Involved:**
-- <img src="assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave-mcp]
-- <img src="assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
-- <img src="assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
+- <img src="../assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave-mcp]
+- <img src="../assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
+- <img src="../assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
 
 <img 
-    src="assets/thematic-break.svg"
+    src="../assets/thematic-break.svg"
     alt="Thematic Break"
     width="100%"
     height="50"
