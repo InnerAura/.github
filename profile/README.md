@@ -22,14 +22,15 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 -->
 
 **Get Involved:**
-- <img src="../assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave-mcp]
-- <img src="../assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
-- <img src="../assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
+- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave-mcp]
+- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
+- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
 
 <img 
     src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/thematic-break.svg"
     alt="Thematic Break"
     width="100%"
+    height="80"
     role="separator"
     aria-label="InnerAurora Labs organizational divider"
     style="margin: 1em 0; display: block;">
