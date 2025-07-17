@@ -13,6 +13,9 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 - **Deepening Understanding** - Systems that expand insight and knowledge discovery
 - **Unlocking Potential** - Tools that reveal and develop latent human capabilities
 
+**Our Approach:**
+We're developing foundational tools and frameworks that enable developers to create more resonant and effective AI experiences.
+
 <!--
 ### Featured Projects
 
