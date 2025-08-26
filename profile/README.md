@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/icon.svg" align="left" width="140">](https://innerauroralab.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/icon.svg" align="left" width="140">](https://innerauroralabs.com)
 
 ## InnerAurora Labs
 
@@ -19,7 +19,7 @@ We're developing foundational tools and frameworks that enable developers to cre
 <!--
 ### Featured Projects
 
-**[HyperWeave MCP][hyperweave-mcp]** - AI collaboration platform
+**[HyperWeave][hyperweave]** - AI collaboration platform
 
 ### Get Involved
 -->
@@ -39,6 +39,6 @@ We're developing foundational tools and frameworks that enable developers to cre
     style="margin: 1em 0; display: block; max-width: 100%;">
 
 <!-- REFERENCE LINKS -->
-[hyperweave-mcp]: https://github.com/InnerAurora/hyperweave-mcp
+[hyperweave]: https://github.com/InnerAurora/hyperweave
 [discord]: https://discord.gg/xmQCedNN
 [x]: https://x.com/hyperweave_ai
