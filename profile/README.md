@@ -25,7 +25,7 @@ We're developing foundational tools and frameworks that enable developers to cre
 -->
 
 **Get Involved:**
-- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave-mcp]
+- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave]
 - <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
 - <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
 
