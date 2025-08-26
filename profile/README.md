@@ -1,8 +1,10 @@
-[<img src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/icon.svg" align="left" width="140">](https://innerauroralabs.com)
+<!-- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/icon.svg" align="left" width="140">](https://innerauroralabs.com) -->
 
-## InnerAurora Labs
+[<img src="/assets/icon.svg" align="left" width="140">](https://innerauroralabs.com)
 
-*Building AI systems for true human-AI collaboration*
+## &emsp; InnerAurora Labs 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Building AI systems for true human-AI collaboration*
 
 <br clear="left"/>
 
@@ -19,16 +21,19 @@ We're developing foundational tools and frameworks that enable developers to cre
 <!--
 ### Featured Projects
 
-**[HyperWeave][hyperweave]** - AI collaboration platform
+**[HyperWeave][hyperweave]**
 
 ### Get Involved
 -->
 
 **Get Involved:**
-- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave]
-- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
-- <img src="https://raw.githubusercontent.com/InnerAurora/.github/7dac31c42dc44c007d3654180dd391bc8bfa70a9/assets/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
+- <img src="/assets/icons/docs.svg" width="16" height="16" alt="HyperWeave"> [Try HyperWeave][hyperweave]
+- <img src="/assets/icons/discord.svg" width="16" height="16" alt="Discord"> [Join Community][discord]
+- <img src="/assets/icons/x.svg" width="16" height="16" alt="X"> [Follow Updates][x]
 
+<img src="/assets/triple-diamond.svg" alt="Thematic Break" width="100%" />
+
+<!-- 
 <img 
     src="https://raw.githubusercontent.com/InnerAurora/.github/860b61f3925defe938524654abed635c4db48441/assets/thematic-break.svg"
     alt="Thematic Break"
@@ -37,6 +42,7 @@ We're developing foundational tools and frameworks that enable developers to cre
     role="separator"
     aria-label="InnerAurora Labs organizational divider"
     style="margin: 1em 0; display: block; max-width: 100%;">
+-->
 
 <!-- REFERENCE LINKS -->
 [hyperweave]: https://github.com/InnerAurora/hyperweave

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="80" viewBox="0 0 800 80">
+    <defs>
+        <linearGradient id="v1Line" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(255,214,231,0)" />
+            <stop offset="15%" stop-color="#ffd6e7" />
+            <stop offset="35%" stop-color="#e6e6fa" />
+            <stop offset="65%" stop-color="#d4f1d4" />
+            <stop offset="85%" stop-color="#ffeaa7" />
+            <stop offset="100%" stop-color="rgba(255,234,167,0)" />
+        </linearGradient>
+        <linearGradient id="v1Chrome" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+            <stop offset="30%" stop-color="#e0e0e0" stop-opacity="0.6" />
+            <stop offset="70%" stop-color="#707070" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8" />
+        </linearGradient>
+        <filter id="v1Glow">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Main divider line -->
+    <rect x="50" y="38" width="700" height="4" fill="url(#v1Line)" rx="2" filter="url(#v1Glow)" />
+    <rect x="50" y="39" width="700" height="2" fill="url(#v1Chrome)" opacity="0.4" rx="1">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="6s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Chrome diamond nodes -->
+    <g filter="url(#v1Glow)">
+        <!-- Left diamond -->
+        <g transform="translate(200, 40)">
+            <path d="M0,-15 L12,0 L0,15 L-12,0 Z" fill="url(#v1Chrome)" stroke="#ffffff" 
+                  stroke-width="0.3" opacity="0.8">
+                <animateTransform attributeName="transform" type="rotate" 
+                                  values="0;90;0" dur="8s" repeatCount="indefinite" />
+            </path>
+            <path d="M0,-10 L8,0 L0,10 L-8,0 Z" fill="rgba(255,214,231,0.5)" opacity="0.6" />
+        </g>
+        
+        <!-- Center diamond -->
+        <g transform="translate(400, 40)">
+            <path d="M0,-18 L15,0 L0,18 L-15,0 Z" fill="url(#v1Chrome)" stroke="#ffffff" 
+                  stroke-width="0.3" opacity="0.9">
+                <animateTransform attributeName="transform" type="rotate" 
+                                  values="0;-90;0" dur="10s" repeatCount="indefinite" />
+            </path>
+            <path d="M0,-14 L11,0 L0,14 L-11,0 Z" fill="rgba(230,230,250,0.6)" opacity="0.7" />
+            <path d="M0,-8 L6,0 L0,8 L-6,0 Z" fill="rgba(212,241,212,0.4)" opacity="0.5" />
+        </g>
+        
+        <!-- Right diamond -->
+        <g transform="translate(600, 40)">
+            <path d="M0,-15 L12,0 L0,15 L-12,0 Z" fill="url(#v1Chrome)" stroke="#ffffff" 
+                  stroke-width="0.3" opacity="0.8">
+                <animateTransform attributeName="transform" type="rotate" 
+                                  values="0;90;0" dur="8s" begin="4s" repeatCount="indefinite" />
+            </path>
+            <path d="M0,-10 L8,0 L0,10 L-8,0 Z" fill="rgba(255,239,213,0.5)" opacity="0.6" />
+        </g>
+    </g>
+    
+    <!-- Flowing particles -->
+    <circle r="1" fill="#ffd6e7" opacity="0.4">
+        <animateMotion dur="12s" repeatCount="indefinite" 
+                       path="M50,40 Q400,20 750,40" />
+        <animate attributeName="opacity" values="0;0.4;0" dur="12s" repeatCount="indefinite" />
+    </circle>
+</svg>
