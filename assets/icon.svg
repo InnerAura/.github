@@ -1,160 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
     <defs>
-        <linearGradient id="macBg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffefd5" />
-            <stop offset="30%" stop-color="#e8d5f2" />
-            <stop offset="70%" stop-color="#dfe6e9" />
-            <stop offset="100%" stop-color="#ffd6e7" />
-        </linearGradient>
-        <linearGradient id="macChrome" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-            <stop offset="25%" stop-color="#e0e0e0" stop-opacity="0.8" />
-            <stop offset="50%" stop-color="#707070" stop-opacity="0.7" />
-            <stop offset="75%" stop-color="#808080" stop-opacity="0.8" />
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
-        </linearGradient>
-        <radialGradient id="macCenterGlow" cx="50%" cy="50%" r="60%">
-            <stop offset="0%" stop-color="#ffd6e7" />
-            <stop offset="40%" stop-color="#e6e6fa" />
-            <stop offset="80%" stop-color="#d4f1d4" />
-            <stop offset="100%" stop-color="transparent" />
+        <radialGradient id="circularHolo" cx="50%" cy="50%">
+            <stop offset="0%" style="stop-color:#ffffff">
+                <animate attributeName="stop-color"
+                         values="#ffffff;#ff0080;#0080ff;#ffffff" dur="4s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="33%" style="stop-color:#ff0000">
+                <animate attributeName="stop-color"
+                         values="#ff0000;#ffff00;#0000ff;#ff0000" dur="5s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="66%" style="stop-color:#0000ff">
+                <animate attributeName="stop-color"
+                         values="#0000ff;#00ffff;#ff0080;#0000ff" dur="3s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#000000" />
         </radialGradient>
-        <linearGradient id="macReflect" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
-            <stop offset="50%" stop-color="#000000" stop-opacity="0.05" />
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
-            <animateTransform attributeName="gradientTransform" type="translate"
-                              values="0,-50; 0,50; 0,-50" dur="10s"
-                              repeatCount="indefinite" />
-        </linearGradient>
-        <pattern id="macNoise" x="0" y="0" width="8" height="8"
-                 patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="1" height="1" fill="#000000" opacity="0.02" />
-            <rect x="3" y="2" width="1" height="1" fill="#ffffff" opacity="0.03" />
-            <rect x="1" y="5" width="1" height="1" fill="#000000" opacity="0.015" />
-            <rect x="6" y="1" width="1" height="1" fill="#ffffff" opacity="0.025" />
-            <rect x="4" y="6" width="1" height="1" fill="#000000" opacity="0.018" />
-            <rect x="7" y="4" width="1" height="1" fill="#ffffff" opacity="0.022" />
-        </pattern>
-        <pattern id="macDust" x="0" y="0" width="40" height="40"
-                 patternUnits="userSpaceOnUse">
-            <circle cx="8" cy="12" r="0.3" fill="#000000" opacity="0.06" />
-            <circle cx="22" cy="5" r="0.25" fill="#ffffff" opacity="0.08" />
-            <circle cx="32" cy="25" r="0.35" fill="#000000" opacity="0.04" />
-            <circle cx="15" cy="32" r="0.4" fill="#ffffff" opacity="0.07" />
-            <circle cx="5" cy="28" r="0.2" fill="#000000" opacity="0.05" />
-            <circle cx="35" cy="15" r="0.3" fill="#ffffff" opacity="0.06" />
-        </pattern>
-        <filter id="macGlow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+        <filter id="circularGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
             <feMerge>
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
-        <filter id="macDistort">
-            <feTurbulence type="turbulence" baseFrequency="0.004" numOctaves="1"
-                          result="turbulence" />
-            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="2" />
-        </filter>
+        <clipPath id="circularShape">
+            <circle cx="128" cy="128" r="108" />
+        </clipPath>
     </defs>
-    <!-- macOS rounded square background -->
-    <rect width="256" height="256" rx="58" fill="url(#macBg)" stroke="url(#macChrome)"
-          stroke-width="1" />
-    <rect width="256" height="256" rx="58" fill="url(#macNoise)" opacity="0.5" />
-    <rect width="256" height="256" rx="58" fill="url(#macDust)" opacity="0.7" />
-    <!-- Central glow area -->
-    <rect x="40" y="40" width="176" height="176" rx="40" fill="url(#macCenterGlow)"
-          opacity="0.3" />
-    <!-- Main geometric composition -->
-    <g transform="translate(128, 128)" filter="url(#macGlow)">
-        <!-- Central chrome hexagon -->
-        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="url(#macChrome)"
-                 stroke="#ffffff" stroke-width="0.5" opacity="0.8" />
-        <polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" fill="url(#macReflect)"
-                 opacity="0.7" />
-        <polygon points="0,-24 21,-12 21,12 0,24 -21,12 -21,-12"
-                 fill="rgba(255,214,231,0.4)" opacity="0.6" filter="url(#macDistort)" />
-        <!-- Orbiting chrome circle -->
-        <g>
-            <circle cx="0" cy="-65" r="18" fill="url(#macChrome)" stroke="#ffffff"
-                    stroke-width="0.3" opacity="0.7" />
-            <circle cx="0" cy="-65" r="14" fill="rgba(230,230,250,0.6)" opacity="0.8" />
-            <circle cx="0" cy="-65" r="10" fill="rgba(212,241,212,0.3)" opacity="0.5"
-                    filter="url(#macDistort)" />
-            <animateTransform attributeName="transform" type="rotate"
-                              values="0 0 0; 360 0 0" dur="20s"
-                              repeatCount="indefinite" />
-        </g>
-        <!-- Chrome square in bottom left -->
-        <g transform="translate(-45, 45)">
-            <rect x="-12" y="-12" width="24" height="24" fill="url(#macChrome)"
-                  stroke="#ffffff" stroke-width="0.3" opacity="0.75"
-                  transform="rotate(15)" />
-            <rect x="-9" y="-9" width="18" height="18" fill="rgba(255,239,213,0.5)"
-                  opacity="0.65" transform="rotate(15)" />
-            <rect x="-6" y="-6" width="12" height="12" fill="rgba(232,213,242,0.4)"
-                  opacity="0.5" filter="url(#macDistort)" transform="rotate(15)" />
-        </g>
-        <!-- Chrome triangle in top right -->
-        <g transform="translate(50, -35)">
-            <polygon points="0,-15 13,8 -13,8" fill="url(#macChrome)" stroke="#ffffff"
-                     stroke-width="0.3" opacity="0.8" />
-            <polygon points="0,-12 10,6 -10,6" fill="rgba(255,234,167,0.5)"
-                     opacity="0.6" />
-            <polygon points="0,-9 7,4 -7,4" fill="rgba(223,230,233,0.4)" opacity="0.7"
-                     filter="url(#macDistort)" />
-        </g>
+    <!-- Main circular background -->
+    <circle cx="128" cy="128" r="108" fill="url(#circularHolo)"
+            filter="url(#circularGlow)" />
+    <!-- Geometric composition within circle -->
+    <g clip-path="url(#circularShape)">
+        <!-- Triangular sections -->
+        <path d="M 128 20 L 236 128 L 128 128 Z" fill="#ff0000" opacity="0.8">
+            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s"
+                     repeatCount="indefinite" />
+        </path>
+        <path d="M 128 128 L 236 128 L 128 236 Z" fill="#0000ff" opacity="0.8">
+            <animate attributeName="opacity" values="0.8;0.6;0.8" dur="3s"
+                     repeatCount="indefinite" />
+        </path>
+        <path d="M 20 128 L 128 128 L 128 236 Z" fill="#ffff00" opacity="0.7">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="5s"
+                     repeatCount="indefinite" />
+        </path>
+        <!-- Structural lines -->
+        <line x1="128" y1="20" x2="128" y2="236" stroke="#000000" stroke-width="6" />
+        <line x1="20" y1="128" x2="236" y2="128" stroke="#000000" stroke-width="6" />
+        <!-- Central point -->
+        <circle cx="128" cy="128" r="8" fill="#ffffff" stroke="#000000"
+                stroke-width="3" />
     </g>
-    <!-- Animated reflection overlay -->
-    <rect x="50" y="50" width="156" height="156" rx="35" fill="url(#macReflect)"
-          opacity="0.4" />
-    <!-- Floating dust particles -->
-    <g>
-        <circle cx="80" cy="180" r="0.8" fill="#ffffff" opacity="0.25">
-            <animate attributeName="cy" values="180;170;180" dur="6s"
-                     repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.25;0.4;0.25" dur="6s"
-                     repeatCount="indefinite" />
-        </circle>
-        <circle cx="180" cy="80" r="0.6" fill="#000000" opacity="0.15">
-            <animate attributeName="cy" values="80;70;80" dur="7s"
-                     repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.15;0.3;0.15" dur="7s"
-                     repeatCount="indefinite" />
-        </circle>
-        <circle cx="200" cy="200" r="0.7" fill="#ffffff" opacity="0.2">
-            <animate attributeName="cy" values="200;190;200" dur="8s"
-                     repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.2;0.35;0.2" dur="8s"
-                     repeatCount="indefinite" />
-        </circle>
-    </g>
-    <!-- Subtle glitch lines -->
-    <g opacity="0.1">
-        <line x1="0" y1="90" x2="256" y2="90" stroke="url(#macChrome)"
-              stroke-width="0.5">
-            <animate attributeName="opacity" values="0;0.1;0" dur="12s"
-                     repeatCount="indefinite" />
-        </line>
-        <line x1="0" y1="165" x2="256" y2="165" stroke="url(#macChrome)"
-              stroke-width="0.3">
-            <animate attributeName="opacity" values="0;0.08;0" dur="15s"
-                     repeatCount="indefinite" />
-        </line>
-    </g>
-    <!-- Dead pixels -->
-    <g opacity="0.4">
-        <rect x="95" y="120" width="1" height="1" fill="#000000" />
-        <rect x="160" y="85" width="1" height="1" fill="#ffffff" />
-        <rect x="140" y="180" width="1" height="1" fill="#000000" />
-        <rect x="210" y="140" width="1" height="1" fill="#ffffff" />
-    </g>
-    <!-- Corner accent elements -->
-    <g opacity="0.3">
-        <circle cx="70" cy="70" r="2" fill="none" stroke="url(#macChrome)"
-                stroke-width="0.5" />
-        <circle cx="186" cy="186" r="2" fill="none" stroke="url(#macChrome)"
-                stroke-width="0.5" />
-    </g>
+    <!-- Outer border -->
+    <circle cx="128" cy="128" r="108" fill="none" stroke="#000000" stroke-width="8" />
 </svg>

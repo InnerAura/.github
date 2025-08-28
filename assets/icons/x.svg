@@ -1,17 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"
      style="vertical-align: middle;">
     <defs>
-        <linearGradient id="chromeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-            <stop offset="20%" stop-color="#e0e0e0" stop-opacity="0.8" />
-            <stop offset="40%" stop-color="#707070" stop-opacity="0.7" />
-            <stop offset="60%" stop-color="#303030" stop-opacity="0.7" />
-            <stop offset="80%" stop-color="#808080" stop-opacity="0.8" />
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
+        <linearGradient id="circularHolo" cx="50%" cy="50%">
+            <stop offset="0%" style="stop-color:#ffffff">
+                <animate attributeName="stop-color"
+                         values="#ffffff;#ff0080;#0080ff;#ffffff" dur="4s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="33%" style="stop-color:#ff0000">
+                <animate attributeName="stop-color"
+                         values="#ff0000;#ffff00;#0000ff;#ff0000" dur="5s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="66%" style="stop-color:#0000ff">
+                <animate attributeName="stop-color"
+                         values="#0000ff;#00ffff;#ff0080;#0000ff" dur="3s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#000000" />
         </linearGradient>
     </defs>
     <rect x="9" y="9" width="46" height="46" rx="4" fill="none"
-          stroke="url(#chromeGradient)" stroke-width="3" />
-    <path fill="url(#chromeGradient)"
+          stroke="url(#circularHolo)" stroke-width="3" />
+    <path fill="url(#circularHolo)"
           d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z" />
 </svg>
