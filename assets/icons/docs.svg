@@ -1,24 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
-    <linearGradient id="circularHolo" cx="50%" cy="50%">
-        <stop offset="0%" style="stop-color:#ffffff">
-            <animate attributeName="stop-color" values="#ffffff;#ff0080;#0080ff;#ffffff"
-                     dur="4s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="33%" style="stop-color:#ff0000">
-            <animate attributeName="stop-color" values="#ff0000;#ffff00;#0000ff;#ff0000"
-                     dur="5s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="66%" style="stop-color:#0000ff">
-            <animate attributeName="stop-color" values="#0000ff;#00ffff;#ff0080;#0000ff"
-                     dur="3s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" style="stop-color:#000000" />
-    </linearGradient>
-    <path fill="url(#circularHolo)"
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
+    <defs>
+        <linearGradient id="docsHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff">
+                <animate attributeName="stop-color" 
+                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
+                         dur="4s" 
+                         repeatCount="indefinite"/>
+            </stop>
+            <stop offset="33%" stop-color="#ff0000">
+                <animate attributeName="stop-color" 
+                         values="#ff0000;#ffff00;#0000ff;#ff0000" 
+                         dur="5s" 
+                         repeatCount="indefinite"/>
+            </stop>
+            <stop offset="66%" stop-color="#0000ff">
+                <animate attributeName="stop-color" 
+                         values="#0000ff;#00ffff;#ff0080;#0000ff" 
+                         dur="3s" 
+                         repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" stop-color="#000000"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Main document shape -->
+    <path fill="url(#docsHolo)"
           d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z M50,55c0,0.55-0.45,1-1,1H15c-0.55,0-1-0.45-1-1V9c0-0.55,0.45-1,1-1h25v7c0,1.65,1.35,3,3,3h7V55z">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
     </path>
-    <path fill="url(#circularHolo)" d="M23 31H41V33H23z"></path>
-    <path fill="url(#circularHolo)" d="M23 35H41V37H23z"></path>
-    <path fill="url(#circularHolo)" d="M23 39H41V41H23z"></path>
-    <path fill="url(#circularHolo)" d="M23 43H33V45H23z"></path>
+    
+    <!-- Animated text lines -->
+    <path fill="url(#docsHolo)" d="M23 31H41V33H23z">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path fill="url(#docsHolo)" d="M23 35H41V37H23z">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <path fill="url(#docsHolo)" d="M23 39H41V41H23z">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <path fill="url(#docsHolo)" d="M23 43H33V45H23z">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Corner fold pulse -->
+    <path fill="url(#docsHolo)" d="M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Data pulse moving along the text (like circuit board) -->
+    <circle cx="23" cy="32" r="1.5" fill="#ffffff">
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="23;41;23" dur="4s" repeatCount="indefinite"/>
+    </circle>
 </svg>

@@ -62,45 +62,27 @@
         <line x1="590" y1="60" x2="610" y2="60"/>
     </g>
     
-    <!-- Circuit nodes with glow layers -->
-    <circle cx="100" cy="40" r="8" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="8;11;8" dur="2s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Circuit nodes -->
     <circle cx="100" cy="40" r="6" fill="url(#circularHolo3)">
         <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="200" cy="40" r="7" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="7;10;7" dur="3s" repeatCount="indefinite"/>
-    </circle>
     <circle cx="200" cy="40" r="5" fill="url(#circularHolo3)">
         <animate attributeName="r" values="5;8;5" dur="3s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="330" cy="32" r="6" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="6;9;6" dur="4s" repeatCount="indefinite"/>
-    </circle>
     <circle cx="330" cy="32" r="4" fill="url(#circularHolo3)">
         <animate attributeName="r" values="4;7;4" dur="4s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="430" cy="48" r="7" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="7;10;7" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
     <circle cx="430" cy="48" r="5" fill="url(#circularHolo3)">
         <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="500" cy="40" r="8" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="8;11;8" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
     <circle cx="500" cy="40" r="6" fill="url(#circularHolo3)">
         <animate attributeName="r" values="6;9;6" dur="3.5s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="600" cy="40" r="7" fill="url(#circularHolo3)" opacity="0.3">
-        <animate attributeName="r" values="7;10;7" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
     <circle cx="600" cy="40" r="5" fill="url(#circularHolo3)">
         <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite"/>
     </circle>

@@ -26,10 +26,6 @@
         </clipPath>
     </defs>
     
-    <!-- Glow effect using multiple circles instead of filter -->
-    <circle cx="128" cy="128" r="112" fill="url(#circularHolo)" opacity="0.3" />
-    <circle cx="128" cy="128" r="110" fill="url(#circularHolo)" opacity="0.5" />
-    
     <!-- Main circular background -->
     <circle cx="128" cy="128" r="108" fill="url(#circularHolo)" />
     
