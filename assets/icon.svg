@@ -1,64 +1,134 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
     <defs>
         <radialGradient id="circularHolo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#ffffff">
+            <stop offset="0%" style="stop-color:#ffffff">
                 <animate attributeName="stop-color"
                          values="#ffffff;#ff0080;#0080ff;#ffffff" 
                          dur="4s"
                          repeatCount="indefinite" />
             </stop>
-            <stop offset="33%" stop-color="#ff0000">
+            <stop offset="33%" style="stop-color:#ff0000">
                 <animate attributeName="stop-color"
                          values="#ff0000;#ffff00;#0000ff;#ff0000" 
                          dur="5s"
                          repeatCount="indefinite" />
             </stop>
-            <stop offset="66%" stop-color="#0000ff">
+            <stop offset="66%" style="stop-color:#0000ff">
                 <animate attributeName="stop-color"
                          values="#0000ff;#00ffff;#ff0080;#0000ff" 
                          dur="3s"
                          repeatCount="indefinite" />
             </stop>
-            <stop offset="100%" stop-color="#000000" />
+            <stop offset="100%" style="stop-color:#000000" />
         </radialGradient>
+        
+        <filter id="circularGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.4" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <radialGradient id="centerParticle" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1">
+                <animate attributeName="stop-color"
+                         values="#FFFFFF;#ff0080;#0080ff;#FFFFFF" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0">
+                <animate attributeName="stop-color"
+                         values="#0080ff;#FFFFFF;#ff0080;#0080ff" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+        </radialGradient>
+        
         <clipPath id="circularShape">
             <circle cx="128" cy="128" r="108" />
         </clipPath>
     </defs>
+    
+    <!-- Multi-layer glow effect -->
+    <circle cx="128" cy="128" r="115" fill="url(#circularHolo)" opacity="0.2" filter="url(#circularGlow)">
+        <animate attributeName="r" values="115;120;115" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="128" cy="128" r="112" fill="url(#circularHolo)" opacity="0.3" />
+    <circle cx="128" cy="128" r="110" fill="url(#circularHolo)" opacity="0.5" />
     
     <!-- Main circular background -->
     <circle cx="128" cy="128" r="108" fill="url(#circularHolo)" />
     
     <!-- Geometric composition within circle -->
     <g clip-path="url(#circularShape)">
-        <!-- Triangular sections -->
-        <path d="M 128 20 L 236 128 L 128 128 Z" fill="#ff0000" opacity="0.8">
+        <!-- Triangular sections with enhanced animations -->
+        <path d="M 128 20 L 236 128 L 128 128 Z" fill="#ff0080" opacity="0.8" filter="url(#circularGlow)">
             <animate attributeName="opacity" 
                      values="0.6;1;0.6" 
                      dur="4s"
                      repeatCount="indefinite" />
+            <animate attributeName="fill"
+                     values="#ff0080;#0080ff;#ff0080"
+                     dur="6s"
+                     repeatCount="indefinite" />
         </path>
-        <path d="M 128 128 L 236 128 L 128 236 Z" fill="#0000ff" opacity="0.8">
+        <path d="M 128 128 L 236 128 L 128 236 Z" fill="#0080ff" opacity="0.8" filter="url(#circularGlow)">
             <animate attributeName="opacity" 
                      values="0.8;0.6;0.8" 
                      dur="3s"
                      repeatCount="indefinite" />
+            <animate attributeName="fill"
+                     values="#0080ff;#ffff00;#0080ff"
+                     dur="5s"
+                     repeatCount="indefinite" />
         </path>
-        <path d="M 20 128 L 128 128 L 128 236 Z" fill="#ffff00" opacity="0.7">
+        <path d="M 20 128 L 128 128 L 128 236 Z" fill="#ffff00" opacity="0.7" filter="url(#circularGlow)">
             <animate attributeName="opacity" 
                      values="0.5;0.9;0.5" 
                      dur="5s"
                      repeatCount="indefinite" />
+            <animate attributeName="fill"
+                     values="#ffff00;#ff00ff;#ffff00"
+                     dur="4s"
+                     repeatCount="indefinite" />
         </path>
         
-        <!-- Structural lines -->
-        <line x1="128" y1="20" x2="128" y2="236" stroke="#000000" stroke-width="6" />
-        <line x1="20" y1="128" x2="236" y2="128" stroke="#000000" stroke-width="6" />
+        <!-- Structural lines with glow -->
+        <line x1="128" y1="20" x2="128" y2="236" stroke="#ffffff" stroke-width="6" opacity="0.3" filter="url(#circularGlow)">
+            <animate attributeName="stroke-width" values="6;8;6" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line x1="20" y1="128" x2="236" y2="128" stroke="#ffffff" stroke-width="6" opacity="0.3" filter="url(#circularGlow)">
+            <animate attributeName="stroke-width" values="6;8;6" dur="3s" begin="1.5s" repeatCount="indefinite" />
+        </line>
         
-        <!-- Central point -->
-        <circle cx="128" cy="128" r="8" fill="#ffffff" stroke="#000000" stroke-width="3" />
+        <!-- Central point with pulse -->
+        <circle cx="128" cy="128" r="12" fill="#ffffff" stroke="url(#circularHolo)" stroke-width="3" filter="url(#circularGlow)">
+            <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
+        </circle>
     </g>
     
-    <!-- Outer border -->
-    <circle cx="128" cy="128" r="108" fill="none" stroke="#000000" stroke-width="8" />
+    <!-- Orbiting particles (like README-AI) -->
+    <g>
+        <circle cx="0" cy="0" r="4" fill="url(#centerParticle)" filter="url(#circularGlow)">
+            <animateMotion path="M 128 128 a 90 90 0 1 1 0 1" dur="8s" repeatCount="indefinite" />
+            <animate attributeName="r" values="4;6;4" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="3" fill="url(#centerParticle)" filter="url(#circularGlow)">
+            <animateMotion path="M 128 128 a 75 75 0 1 0 0 1" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="3.5" fill="url(#centerParticle)" filter="url(#circularGlow)">
+            <animateMotion path="M 128 128 a 100 100 0 1 1 0 1" dur="10s" repeatCount="indefinite" />
+            <animate attributeName="r" values="3.5;5.5;3.5" dur="5s" repeatCount="indefinite" />
+        </circle>
+    </g>
+    
+    <!-- Outer border with animation -->
+    <circle cx="128" cy="128" r="108" fill="none" stroke="url(#circularHolo)" stroke-width="8" filter="url(#circularGlow)">
+        <animate attributeName="stroke-width" values="8;10;8" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite" />
+    </circle>
 </svg>

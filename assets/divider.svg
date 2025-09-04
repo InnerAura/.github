@@ -1,98 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="80" viewBox="0 0 700 80">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
     <defs>
-        <radialGradient id="circularHolo3" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#ffffff">
+        <radialGradient id="xHolo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#ffffff">
                 <animate attributeName="stop-color" 
                          values="#ffffff;#ff0080;#0080ff;#ffffff" 
                          dur="4s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="33%" stop-color="#ff0000">
+            <stop offset="33%" style="stop-color:#ff0000">
                 <animate attributeName="stop-color" 
                          values="#ff0000;#ffff00;#0000ff;#ff0000" 
                          dur="5s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="66%" stop-color="#0000ff">
+            <stop offset="66%" style="stop-color:#0000ff">
                 <animate attributeName="stop-color" 
                          values="#0000ff;#00ffff;#ff0080;#0000ff" 
                          dur="3s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="100%" stop-color="#000000"/>
+            <stop offset="100%" style="stop-color:#000000"/>
+        </radialGradient>
+        
+        <filter id="xGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.6" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <radialGradient id="pulseGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1">
+                <animate attributeName="stop-color"
+                         values="#FFFFFF;#ff0080;#0080ff;#FFFFFF" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0">
+                <animate attributeName="stop-color"
+                         values="#0080ff;#FFFFFF;#ff0080;#0080ff" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
         </radialGradient>
     </defs>
     
-    <!-- Glow effect base layers -->
-    <rect x="0" y="36" width="700" height="8" fill="url(#circularHolo3)" opacity="0.3"/>
-    <rect x="0" y="37" width="700" height="6" fill="url(#circularHolo3)" opacity="0.5"/>
+    <!-- Animated background border -->
+    <rect x="9" y="9" width="46" height="46" rx="4" fill="none" 
+          stroke="url(#xHolo)" stroke-width="3" filter="url(#xGlow)">
+        <animate attributeName="stroke-width" values="3;5;3" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="4;8;4" dur="4s" repeatCount="indefinite"/>
+    </rect>
     
-    <!-- Main circuit board line -->
-    <rect x="0" y="38" width="700" height="4" fill="url(#circularHolo3)"/>
+    <!-- X logo path with glow -->
+    <path fill="url(#xHolo)"
+          d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z"
+          filter="url(#xGlow)">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+    </path>
     
-    <!-- Circuit nodes and connections with glow duplicate layers -->
-    <g stroke="url(#circularHolo3)" stroke-width="4" fill="none" opacity="0.3">
-        <line x1="100" y1="40" x2="100" y2="20"/>
-        <line x1="90" y1="20" x2="110" y2="20"/>
-        <line x1="200" y1="40" x2="200" y2="60"/>
-        <line x1="190" y1="60" x2="210" y2="60"/>
-        <line x1="300" y1="40" x2="320" y2="25"/>
-        <line x1="320" y1="25" x2="340" y2="40"/>
-        <line x1="400" y1="40" x2="420" y2="55"/>
-        <line x1="420" y1="55" x2="440" y2="40"/>
-        <line x1="500" y1="40" x2="500" y2="20"/>
-        <line x1="490" y1="20" x2="510" y2="20"/>
-        <line x1="600" y1="40" x2="600" y2="60"/>
-        <line x1="590" y1="60" x2="610" y2="60"/>
-    </g>
-    
-    <!-- Main circuit connections -->
-    <g stroke="url(#circularHolo3)" stroke-width="2" fill="none">
-        <line x1="100" y1="40" x2="100" y2="20"/>
-        <line x1="90" y1="20" x2="110" y2="20"/>
-        <line x1="200" y1="40" x2="200" y2="60"/>
-        <line x1="190" y1="60" x2="210" y2="60"/>
-        <line x1="300" y1="40" x2="320" y2="25"/>
-        <line x1="320" y1="25" x2="340" y2="40"/>
-        <line x1="400" y1="40" x2="420" y2="55"/>
-        <line x1="420" y1="55" x2="440" y2="40"/>
-        <line x1="500" y1="40" x2="500" y2="20"/>
-        <line x1="490" y1="20" x2="510" y2="20"/>
-        <line x1="600" y1="40" x2="600" y2="60"/>
-        <line x1="590" y1="60" x2="610" y2="60"/>
-    </g>
-    
-    <!-- Circuit nodes -->
-    <circle cx="100" cy="40" r="6" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
+    <!-- Corner accent nodes with enhanced animation -->
+    <circle cx="9" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="9" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
     </circle>
     
-    <circle cx="200" cy="40" r="5" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="5;8;5" dur="3s" repeatCount="indefinite"/>
+    <!-- Orbiting particles around the X -->
+    <circle cx="0" cy="0" r="1.5" fill="url(#pulseGrad)" filter="url(#xGlow)">
+        <animateMotion path="M 32 32 a 20 20 0 1 1 0 0.1" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
     </circle>
-    
-    <circle cx="330" cy="32" r="4" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="4;7;4" dur="4s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="1.5" fill="url(#pulseGrad)" filter="url(#xGlow)">
+        <animateMotion path="M 32 32 a 15 15 0 1 0 0 0.1" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
     </circle>
-    
-    <circle cx="430" cy="48" r="5" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle cx="500" cy="40" r="6" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="6;9;6" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle cx="600" cy="40" r="5" fill="url(#circularHolo3)">
-        <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Data pulse -->
-    <circle r="3" fill="#ffffff" opacity="0.9">
-        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1s" repeatCount="indefinite"/>
-        <animateMotion dur="6s" repeatCount="indefinite">
-            <mpath href="#dataPulsePath"/>
-        </animateMotion>
-    </circle>
-    <path id="dataPulsePath" d="M0,40 L700,40" opacity="0"/>
 </svg>
