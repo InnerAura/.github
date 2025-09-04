@@ -1,27 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
     <defs>
-        <linearGradient id="docsHolo" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1">
+        <radialGradient id="docsHolo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#ffffff">
                 <animate attributeName="stop-color" 
                          values="#ffffff;#ff0080;#0080ff;#ffffff" 
                          dur="4s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="33%" style="stop-color:#ff0000;stop-opacity:1">
+            <stop offset="33%" style="stop-color:#ff0000">
                 <animate attributeName="stop-color" 
                          values="#ff0000;#ffff00;#0000ff;#ff0000" 
                          dur="5s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="66%" style="stop-color:#0000ff;stop-opacity:1">
+            <stop offset="66%" style="stop-color:#0000ff">
                 <animate attributeName="stop-color" 
                          values="#0000ff;#00ffff;#ff0080;#0000ff" 
                          dur="3s" 
                          repeatCount="indefinite"/>
             </stop>
-            <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
-        </linearGradient>
+            <stop offset="100%" style="stop-color:#000000"/>
+        </radialGradient>
+        
+        <filter id="docsGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
     </defs>
+    
+    <!-- Background glow -->
+    <rect x="12" y="6" width="40" height="52" rx="2" fill="url(#docsHolo)" opacity="0.2" filter="url(#docsGlow)">
+        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+    </rect>
     
     <!-- Main document shape -->
     <path fill="url(#docsHolo)"
@@ -29,28 +45,28 @@
         <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
     </path>
     
-    <!-- Animated text lines -->
-    <path fill="url(#docsHolo)" d="M23 31H41V33H23z">
+    <!-- Animated text lines - more subtle animation -->
+    <rect x="23" y="31" width="18" height="2" fill="url(#docsHolo)">
         <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-    </path>
-    <path fill="url(#docsHolo)" d="M23 35H41V37H23z">
+    </rect>
+    <rect x="23" y="35" width="18" height="2" fill="url(#docsHolo)">
         <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-    </path>
-    <path fill="url(#docsHolo)" d="M23 39H41V41H23z">
+    </rect>
+    <rect x="23" y="39" width="18" height="2" fill="url(#docsHolo)">
         <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
-    </path>
-    <path fill="url(#docsHolo)" d="M23 43H33V45H23z">
+    </rect>
+    <rect x="23" y="43" width="10" height="2" fill="url(#docsHolo)">
         <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-    </path>
+    </rect>
     
-    <!-- Corner fold pulse -->
-    <path fill="url(#docsHolo)" d="M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z" opacity="0.5">
+    <!-- Corner fold with pulse -->
+    <path fill="url(#docsHolo)" d="M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z" opacity="0.5" filter="url(#docsGlow)">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
     </path>
     
-    <!-- Data pulse moving along the text (like circuit board) -->
-    <circle cx="23" cy="32" r="1.5" fill="#ffffff">
+    <!-- Data pulse moving along the text -->
+    <circle cx="23" cy="32" r="2" fill="#ffffff" filter="url(#docsGlow)">
         <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="23;41;23" dur="4s" repeatCount="indefinite"/>
+        <animateMotion path="M 0 0 L 18 0 L 18 12 L 0 12 Z" dur="4s" repeatCount="indefinite"/>
     </circle>
 </svg>

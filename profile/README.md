@@ -1,4 +1,4 @@
-[<img src="/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/85335cf64236a69f70db0e661c6d2ae51a58e04c/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
 
 ## &nbsp;&nbsp; InnerAurora Labs
 

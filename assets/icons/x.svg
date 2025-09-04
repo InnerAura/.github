@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
     <defs>
-        <linearGradient id="xHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+        <radialGradient id="xHolo" cx="50%" cy="50%" r="50%">
             <stop offset="0%" style="stop-color:#ffffff">
                 <animate attributeName="stop-color" 
                          values="#ffffff;#ff0080;#0080ff;#ffffff" 
@@ -20,33 +20,63 @@
                          repeatCount="indefinite"/>
             </stop>
             <stop offset="100%" style="stop-color:#000000"/>
-        </linearGradient>
+        </radialGradient>
+        
+        <filter id="xGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.6" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <radialGradient id="pulseGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1">
+                <animate attributeName="stop-color"
+                         values="#FFFFFF;#ff0080;#0080ff;#FFFFFF" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0">
+                <animate attributeName="stop-color"
+                         values="#0080ff;#FFFFFF;#ff0080;#0080ff" dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+        </radialGradient>
     </defs>
     
-    <!-- Animated border -->
+    <!-- Animated background border -->
     <rect x="9" y="9" width="46" height="46" rx="4" fill="none" 
-          stroke="url(#xHolo)" stroke-width="3">
+          stroke="url(#xHolo)" stroke-width="3" filter="url(#xGlow)">
         <animate attributeName="stroke-width" values="3;5;3" dur="3s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="4;8;4" dur="4s" repeatCount="indefinite"/>
     </rect>
     
-    <!-- X logo path -->
+    <!-- X logo path with glow -->
     <path fill="url(#xHolo)"
-          d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z">
+          d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z"
+          filter="url(#xGlow)">
         <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
     </path>
     
-    <!-- Corner accent nodes (matching circuit board style) -->
-    <circle cx="9" cy="9" r="2" fill="url(#xHolo)">
-        <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    <!-- Corner accent nodes with enhanced animation -->
+    <circle cx="9" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="55" cy="9" r="2" fill="url(#xHolo)">
-        <animate attributeName="r" values="2;3;2" dur="2.5s" repeatCount="indefinite"/>
+    <circle cx="55" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="55" cy="55" r="2" fill="url(#xHolo)">
-        <animate attributeName="r" values="2;3;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    <circle cx="55" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="9" cy="55" r="2" fill="url(#xHolo)">
-        <animate attributeName="r" values="2;3;2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+    <circle cx="9" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
+        <animate attributeName="r" values="2;4;2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
     </circle>
 </svg>

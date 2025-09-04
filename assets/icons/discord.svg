@@ -1,42 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"
      style="vertical-align: middle;">
     <defs>
-        <linearGradient id="discordHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+        <!-- Animated holographic gradient matching original -->
+        <radialGradient id="discordHolo" cx="50%" cy="50%" r="50%">
             <stop offset="0%" style="stop-color:#ffffff">
                 <animate attributeName="stop-color" 
-                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
+                         values="#ffffff;#ff0080;#0080ff;#ffffff"
                          dur="4s" 
-                         repeatCount="indefinite"/>
+                         repeatCount="indefinite" />
             </stop>
             <stop offset="33%" style="stop-color:#ff0000">
                 <animate attributeName="stop-color" 
-                         values="#ff0000;#ffff00;#0000ff;#ff0000" 
+                         values="#ff0000;#ffff00;#0000ff;#ff0000"
                          dur="5s" 
-                         repeatCount="indefinite"/>
+                         repeatCount="indefinite" />
             </stop>
             <stop offset="66%" style="stop-color:#0000ff">
                 <animate attributeName="stop-color" 
-                         values="#0000ff;#00ffff;#ff0080;#0000ff" 
+                         values="#0000ff;#00ffff;#ff0080;#0000ff"
                          dur="3s" 
-                         repeatCount="indefinite"/>
+                         repeatCount="indefinite" />
             </stop>
-            <stop offset="100%" style="stop-color:#000000"/>
-        </linearGradient>
+            <stop offset="100%" style="stop-color:#000000" />
+        </radialGradient>
+        
+        <!-- Subtle glow filter -->
+        <filter id="discordGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <!-- Eye gradient for animation -->
+        <radialGradient id="eyeGrad">
+            <stop offset="0%" style="stop-color:#ffffff">
+                <animate attributeName="stop-color"
+                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
+                         dur="6s"
+                         repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#000000" />
+        </radialGradient>
     </defs>
     
-    <!-- Main Discord shape -->
-    <path fill="url(#discordHolo)"
+    <!-- Background pulse -->
+    <circle cx="32" cy="32" r="28" fill="none" stroke="url(#discordHolo)" 
+            stroke-width="1" opacity="0.3">
+        <animate attributeName="r" values="28;32;28" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Main Discord body shape -->
+    <path fill="url(#discordHolo)" filter="url(#discordGlow)"
           d="M52.263,15.938c-4.816-3.871-13.024-4.925-13.372-4.968c-0.437-0.057-0.855,0.182-1.035,0.583c-0.025,0.055-0.543,1.23-0.778,2.782C35.086,14.073,33.313,14,31.983,14c-1.373,0-3.216,0.076-5.289,0.36c-0.233-1.564-0.757-2.753-0.782-2.808c-0.18-0.401-0.598-0.636-1.039-0.583c-0.337,0.043-8.322,1.099-13.188,5.013C9.122,18.35,4,32.125,4,44c0,0.173,0.045,0.344,0.131,0.495c3.427,6.02,13.558,8.432,15.837,8.505c0.011,0,0.021,0,0.032,0c0.303,0,0.591-0.138,0.781-0.375l3.495-4.368C26.519,48.703,29.098,49,32.024,49c2.911,0,5.474-0.294,7.706-0.737l3.49,4.362C43.409,52.862,43.697,53,44,53c0.011,0,0.021,0,0.032,0c2.274-0.073,12.39-2.495,15.835-8.547c0.086-0.15,0.131-0.321,0.131-0.495C59.999,32.105,54.877,18.349,52.263,15.938z M44.451,50.963l-2.56-3.2c5.635-1.499,8.568-3.846,8.744-3.99c0.426-0.35,0.487-0.978,0.139-1.405c-0.349-0.426-0.978-0.49-1.406-0.143C49.309,42.273,43.365,47,32.024,47c-11.331,0-17.322-4.719-17.394-4.776c-0.427-0.348-1.057-0.284-1.405,0.145c-0.349,0.428-0.285,1.058,0.144,1.407c0.177,0.144,3.121,2.48,8.748,3.979l-2.567,3.209c-2.906-0.323-10.736-2.658-13.547-7.236c0.078-11.308,5.015-24.405,6.989-26.232c3.547-2.851,9.281-4.06,11.356-4.42c0.133,0.413,0.281,0.98,0.373,1.611c-2.991,0.579-6.274,1.619-9.246,3.463c-0.47,0.291-0.614,0.907-0.323,1.376c0.292,0.471,0.907,0.616,1.376,0.323C21.928,16.5,28.529,16,31.983,16c3.467,0,10.089,0.5,15.49,3.85c0.164,0.102,0.346,0.15,0.526,0.15c0.334,0,0.662-0.168,0.851-0.473c0.292-0.469,0.147-1.085-0.323-1.376c-3.043-1.888-6.417-2.931-9.473-3.502c0.093-0.618,0.239-1.171,0.369-1.576c2.109,0.352,8.01,1.549,11.534,4.379c2.026,1.871,6.961,14.95,7.04,26.235C55.172,48.292,47.352,50.640,44.451,50.963z">
-        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite" />
     </path>
     
-    <!-- Animated left eye -->
+    <!-- Discord Eyes (proper circles for eyes) -->
+    <!-- Left eye -->
     <ellipse cx="24" cy="34.5" rx="4" ry="4.5" fill="#000000">
-        <animate attributeName="ry" values="4.5;2;4.5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="4.5;0.5;4.5" dur="6s" 
+                 repeatCount="indefinite" />
+        <animate attributeName="rx" values="4;3.5;4" dur="6s" 
+                 repeatCount="indefinite" />
     </ellipse>
     
-    <!-- Animated right eye -->
+    <!-- Right eye -->
     <ellipse cx="39.938" cy="34.5" rx="3.938" ry="4.5" fill="#000000">
-        <animate attributeName="ry" values="4.5;2;4.5" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="4.5;0.5;4.5" dur="6s" 
+                 repeatCount="indefinite" begin="0.5s" />
+        <animate attributeName="rx" values="3.938;3.5;3.938" dur="6s" 
+                 repeatCount="indefinite" begin="0.5s" />
     </ellipse>
+    
+    <!-- Eye glow/iris effect -->
+    <circle cx="24" cy="34.5" r="1.5" fill="url(#eyeGrad)" opacity="0.8">
+        <animate attributeName="r" values="1.5;2;1.5" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="39.938" cy="34.5" r="1.5" fill="url(#eyeGrad)" opacity="0.8">
+        <animate attributeName="r" values="1.5;2;1.5" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="6s" repeatCount="indefinite" begin="0.5s" />
+    </circle>
+    
+    <!-- Corner accent particles -->
+    <circle cx="8" cy="8" r="1" fill="url(#discordHolo)" opacity="0.6">
+        <animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="56" cy="8" r="1" fill="url(#discordHolo)" opacity="0.6">
+        <animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite" begin="0.75s" />
+    </circle>
+    <circle cx="8" cy="56" r="1" fill="url(#discordHolo)" opacity="0.6">
+        <animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite" begin="1.5s" />
+    </circle>
+    <circle cx="56" cy="56" r="1" fill="url(#discordHolo)" opacity="0.6">
+        <animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite" begin="2.25s" />
+    </circle>
+    
+    <!-- Subtle orbital particle -->
+    <circle cx="0" cy="0" r="1.5" fill="#ffffff" opacity="0.4" filter="url(#discordGlow)">
+        <animateMotion path="M 32 32 m -26, 0 a 26,26 0 1,1 52,0 a 26,26 0 1,1 -52,0" 
+                       dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite" />
+    </circle>
 </svg>
