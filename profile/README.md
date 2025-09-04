@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/InnerAurora/.github/85335cf64236a69f70db0e661c6d2ae51a58e04c/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/ad98c2e5a8f27e7856075d7baeff8e68eb1b2d40/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
 
 ## &nbsp;&nbsp; InnerAurora Labs
 
@@ -30,7 +30,7 @@ We're developing foundational tools and frameworks that enable developers to cre
 - <img src="/assets/icons/x.svg" width="2.25%" alt="X"> [Follow Updates][x]
 
 <img 
-    src="/assets/divider.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/ad98c2e5a8f27e7856075d7baeff8e68eb1b2d40/assets/divider.svg"
     alt="Thematic Break"
     width="100%"
     height="auto"
