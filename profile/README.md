@@ -20,17 +20,48 @@ We're developing foundational tools and frameworks that enable developers to cre
 ### Featured Projects
 
 **[HyperWeave][hyperweave]**
-
-### Get Involved
 -->
 
-**Get Involved:**
-- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/fd3bbba6cfc8c89dddae37a683cbab70300cca47/assets/icons/hyperweave.svg" width="30%" alt="HyperWeave">][hyperweave]
-- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/fd3bbba6cfc8c89dddae37a683cbab70300cca47/assets/icons/x.svg" width="30%" alt="X">][x]
-- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/fd3bbba6cfc8c89dddae37a683cbab70300cca47/assets/icons/discord.svg" width="30%" alt="Discord">][discord]
-- [<img src="/assets/icons/instagram.svg" width="30%" alt="Instagram">](https://www.instagram.com/innerauroralabs/)
-- [<img src="/assets/icons/tiktok.svg" width="30%" alt="TikTok">](https://www.tiktok.com/@innerauroralabs)
-- [<img src="/assets/icons/youtube.svg" width="30%" alt="YouTube">](https://www.youtube.com/@InnerAuroraLabs)
+**Let's Build**
+
+Join the `InnerAurora` community and help shape the future of human-AI collaboration:
+
+<!-- FOOTER: SOCIAL RIBBONS -->
+<div align="center">
+
+  <!-- Social Icons -->
+  <a href="https://github.com/InnerAurora/hyperweave">
+    <img src="/assets/icons/hyperweave.svg" width="8%" alt="HyperWeave">
+  </a>
+  &nbsp;
+  <a href="https://discord.gg/wVmcAZPQZ8">
+    <img src="/assets/icons/discord.svg" width="8%" alt="Discord">
+  </a>
+  &nbsp;
+  <a href="https://www.instagram.com/hyperweave.ai/">
+    <img src="/assets/icons/instagram.svg" width="8%" alt="Instagram">
+  </a>
+  <!--
+  &nbsp;
+  <a href="https://www.linkedin.com/company/innerauroralabs/">
+    <img src="/assets/icons/linkedin.svg" width="8%" alt="LinkedIn
+    ">
+  </a>
+  -->
+  &nbsp;
+  <a href="https://www.tiktok.com/@hyperweave.ai"></a>
+    <img src="/assets/icons/tiktok.svg" width="8%" alt="TikTok">
+  </a>
+  &nbsp;
+  <a href="https://x.com/InnerAuroraLabs">
+    <img src="/assets/icons/x.svg" width="8%" alt="X"
+    >
+  </a>
+  <a href="https://www.youtube.com/@InnerAuroraLabs"></a>
+    <img src="/assets/icons/youtube.svg" width="8%" alt="YouTube">
+  </a>
+
+</div>
 
 <img
     src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/divider.svg"
