@@ -25,12 +25,12 @@ We're developing foundational tools and frameworks that enable developers to cre
 -->
 
 **Get Involved:**
-- <img src="/assets/icons/hyperweave.svg" width="25%" alt="HyperWeave">
-- <img src="/assets/icons/discord.svg" width="25%" alt="Discord">
-- <img src="/assets/icons/x.svg" width="25%" alt="X">
+- [<img src="/assets/icons/hyperweave.svg" width="15%" alt="HyperWeave">][hyperweave]
+- [<img src="/assets/icons/discord.svg" width="15%" alt="Discord">][discord]
+- [<img src="/assets/icons/x.svg" width="15%" alt="X">][x]
 
 <!-- GITHUB README VERSION — single image + image map (aligned rows, full-card hitboxes) -->
-<img
+<!-- <img
   src="./assets/social-ribbons.svg?sanitize=true"
   alt="HyperWeave Social Links"
   width="920"
@@ -43,7 +43,7 @@ We're developing foundational tools and frameworks that enable developers to cre
   <area shape="rect" coords="500,50,860,114" href="https://x.com/InnerAuroraLabs" alt="X" />
   <area shape="rect" coords="40,196,400,260" href="https://github.com/InnerAurora/hyperweave" alt="Try HyperWeave" />
   <area shape="rect" coords="500,196,860,260" href="https://github.com/InnerAurora/hyperweave" alt="Docs & Guides" />
-</map>
+</map> -->
 
 <img 
     src="/assets/divider.svg"
