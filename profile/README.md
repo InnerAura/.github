@@ -61,7 +61,7 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
   </a>
   -->
   &nbsp;
-  <a href="https://www.tiktok.com/@hyperweave.ai"></a>
+  <a href="https://www.tiktok.com/@hyperweave.ai">
     <img 
       src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/tiktok.svg" width="12%"
       alt="TikTok"
@@ -76,7 +76,7 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
     >
   </a>
   &nbsp;
-  <a href="https://www.youtube.com/@InnerAuroraLabs"></a>
+  <a href="https://www.youtube.com/@InnerAuroraLabs">
     <img 
       src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/youtube.svg" width="12%"
       alt="YouTube"
