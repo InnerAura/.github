@@ -1,4 +1,7 @@
+<!-- 
 [<img src="/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
+-->
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
 
 ## &nbsp;&nbsp; InnerAurora Labs
 
@@ -25,12 +28,17 @@ We're developing foundational tools and frameworks that enable developers to cre
 -->
 
 **Get Involved:**
+- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/icons/hyperweave.svg" width="30%" alt="HyperWeave">][hyperweave]
+- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/icons/discord.svg" width="30%" alt="Discord">][discord]
+- [<img src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/icons/x.svg" width="30%" alt="X">][x]
+
+<!-- 
 - [<img src="/assets/icons/hyperweave.svg" width="25%" alt="HyperWeave">][hyperweave]
 - [<img src="/assets/icons/discord.svg" width="25%" alt="Discord">][discord]
 - [<img src="/assets/icons/x.svg" width="25%" alt="X">][x]
 
-<!-- GITHUB README VERSION — single image + image map (aligned rows, full-card hitboxes) -->
-<!-- <img
+<!-- GITHUB README VERSION — single image + image map (aligned rows, full-card hitboxes)
+<img
   src="./assets/social-ribbons.svg?sanitize=true"
   alt="HyperWeave Social Links"
   width="920"
@@ -43,10 +51,18 @@ We're developing foundational tools and frameworks that enable developers to cre
   <area shape="rect" coords="500,50,860,114" href="https://x.com/InnerAuroraLabs" alt="X" />
   <area shape="rect" coords="40,196,400,260" href="https://github.com/InnerAurora/hyperweave" alt="Try HyperWeave" />
   <area shape="rect" coords="500,196,860,260" href="https://github.com/InnerAurora/hyperweave" alt="Docs & Guides" />
-</map> -->
+</map>
 
-<img 
-    src="/assets/divider.svg"
+<img
+  src="/assets/divider.svg"
+  alt="HyperWeave Social Links"
+  width="600"
+  height="480"
+  usemap="#social-links-mobile">
+-->
+
+<img
+    src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/divider.svg"
     alt="Thematic Break"
     width="100%"
     height="auto"
