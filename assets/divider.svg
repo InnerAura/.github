@@ -42,6 +42,7 @@
     </linearGradient>
 
     <!-- Subtle glow for line and tiles -->
+    <!-- 
     <filter id="lineGlow" x="-50%" y="-200%" width="200%" height="500%">
       <feGaussianBlur stdDeviation="2"/>
       <feComponentTransfer><feFuncA type="linear" slope="0.7"/></feComponentTransfer>
@@ -49,6 +50,7 @@
         <feMergeNode/><feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    -->
 
     <!-- Diamond refraction (lightweight) -->
     <filter id="diamondRefraction" x="-30%" y="-30%" width="160%" height="160%">
