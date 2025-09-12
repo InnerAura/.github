@@ -25,9 +25,9 @@ We're developing foundational tools and frameworks that enable developers to cre
 -->
 
 **Get Involved:**
-- <img src="/assets/icons/hyperweave.svg" width="15%" alt="HyperWeave">
-- <img src="/assets/icons/discord.svg" width="15%" alt="Discord">
-- <img src="/assets/icons/x.svg" width="15%" alt="X">
+- <img src="/assets/icons/hyperweave.svg" width="25%" alt="HyperWeave">
+- <img src="/assets/icons/discord.svg" width="25%" alt="Discord">
+- <img src="/assets/icons/x.svg" width="25%" alt="X">
 
 <img 
     src="/assets/divider.svg"
