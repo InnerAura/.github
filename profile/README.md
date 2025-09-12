@@ -58,7 +58,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
       >
   </a>
   &nbsp;
-  <a href="https://www.linkedin.com/elisalamie/">
+  <a href="https://www.linkedin.com/in/elisalamie/">
   <!-- <a href="https://www.linkedin.com/company/innerauroralabs/"> -->
     <img 
     src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/linkedin.svg"
