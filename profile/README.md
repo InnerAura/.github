@@ -14,17 +14,24 @@ Our research focuses on **agentic systems** and **generative tools** that enhanc
 - **Unlocking Potential** - Tools that reveal and develop latent human capabilities
 
 **Our Approach:**
+
 We're developing foundational tools and frameworks that enable developers to create more resonant and effective AI experiences.
 
 <!--
-### Featured Projects
+### Our Flagship Product: HyperWeave
 
-**[HyperWeave][hyperweave]**
+[<img src="https://path/to/your/hyperweave_banner.svg" alt="HyperWeave - Automates unique UI design from creative constraints">](https://github.com/InnerAurora/hyperweave)
+
+HyperWeave is the first implementation of our vision. It's a platform that automates the creation of beautiful, unique, and intelligent UI components from creative constraints. It's the engine for ending visual homogenization and the first step towards a truly intelligent visual web.
+
+**[Explore HyperWeave →](https://github.com/InnerAurora/hyperweave)**
 -->
 
 **Let's Build Together:**
 
-Join the `InnerAurora` community and help shape the future of human-AI collaboration. Whether you're a developer, researcher, artist, philosopher, or enthusiast, we welcome your ideas and contributions. Cheers!
+We're building the future of human-AI collaboration, and our first step is **HyperWeave**. Explore the project, try our demos, and help us build the tools that will power the next generation of visual intelligence.
+
+Join the `InnerAurora` community to contribute to the vision. Whether you're a developer, researcher, or artist, we welcome your ideas. Cheers!
 
 <!-- FOOTER: SOCIAL RIBBONS -->
 <div align="left">
@@ -50,16 +57,15 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
       alt="Instagram"
       >
   </a>
-  <!--
   &nbsp;
-  <a href="https://www.linkedin.com/company/innerauroralabs/">
+  <a href="https://www.linkedin.com/elisalamie/">
+  <!-- <a href="https://www.linkedin.com/company/innerauroralabs/"> -->
     <img 
-    src="/assets/icons/linkedin.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/linkedin.svg"
     width="12%" 
     alt="LinkedIn"
     >
   </a>
-  -->
   &nbsp;
   <a href="https://www.tiktok.com/@hyperweave.ai">
     <img 
@@ -85,7 +91,7 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
 
 </div>
 
-<br />
+<br clear="left"/>
 
 <img
     src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/divider.svg"
@@ -118,5 +124,5 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
 [instagram]: https://www.instagram.com/hyperweave.ai/
 [linkedin]: https://www.linkedin.com/company/innerauroralabs/
 [tiktok]: https://www.tiktok.com/@hyperweave.ai
-[x]: https://x.com/InnerAuroraLabs
+[x]: https://x.com/InnerAuroraLabss
 [youtube]: https://www.youtube.com/@InnerAuroraLabs
