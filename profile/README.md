@@ -22,50 +22,72 @@ We're developing foundational tools and frameworks that enable developers to cre
 **[HyperWeave][hyperweave]**
 -->
 
-**Let's Build**
+**Let's Build Together:**
 
-Join the `InnerAurora` community and help shape the future of human-AI collaboration:
+Join the `InnerAurora` community and help shape the future of human-AI collaboration. Whether you're a developer, researcher, artist, philosopher, or enthusiast, we welcome your ideas and contributions. Cheers!
 
 <!-- FOOTER: SOCIAL RIBBONS -->
 <div align="center">
 
   <!-- Social Icons -->
   <a href="https://github.com/InnerAurora/hyperweave">
-    <img src="/assets/icons/hyperweave.svg" width="8%" alt="HyperWeave">
+    <img 
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/hyperweave.svg" width="8%"
+      alt="Try HyperWeave"
+      >
   </a>
   &nbsp;
   <a href="https://discord.gg/wVmcAZPQZ8">
-    <img src="/assets/icons/discord.svg" width="8%" alt="Discord">
+    <img 
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/discord.svg" width="8%"
+      alt="Join us on Discord"
+      >
   </a>
   &nbsp;
   <a href="https://www.instagram.com/hyperweave.ai/">
-    <img src="/assets/icons/instagram.svg" width="8%" alt="Instagram">
+    <img 
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/instagram.svg" width="8%"
+      alt="Instagram"
+      >
   </a>
   <!--
   &nbsp;
   <a href="https://www.linkedin.com/company/innerauroralabs/">
-    <img src="/assets/icons/linkedin.svg" width="8%" alt="LinkedIn
-    ">
+    <img 
+    src="/assets/icons/linkedin.svg"
+    width="8%" 
+    alt="LinkedIn"
+    >
   </a>
   -->
   &nbsp;
   <a href="https://www.tiktok.com/@hyperweave.ai"></a>
-    <img src="/assets/icons/tiktok.svg" width="8%" alt="TikTok">
+    <img 
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/tiktok.svg" width="8%"
+      alt="TikTok"
+      >
   </a>
   &nbsp;
   <a href="https://x.com/InnerAuroraLabs">
-    <img src="/assets/icons/x.svg" width="8%" alt="X"
+    <img
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/x.svg"
+      width="8%" 
+      alt="X"
     >
   </a>
+  &nbsp;
   <a href="https://www.youtube.com/@InnerAuroraLabs"></a>
-    <img src="/assets/icons/youtube.svg" width="8%" alt="YouTube">
+    <img 
+      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/youtube.svg" width="8%"
+      alt="YouTube"
+      >
   </a>
 
 </div>
 
 <img
-    src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/divider.svg"
-    alt="Thematic Break"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/divider.svg"
+    alt="Divider"
     width="100%"
     height="auto"
 />
@@ -91,4 +113,8 @@ Join the `InnerAurora` community and help shape the future of human-AI collabora
 <!-- REFERENCE LINKS -->
 [hyperweave]: https://github.com/InnerAurora/hyperweave
 [discord]: https://discord.gg/wVmcAZPQZ8
+[instagram]: https://www.instagram.com/hyperweave.ai/
+[linkedin]: https://www.linkedin.com/company/innerauroralabs/
+[tiktok]: https://www.tiktok.com/@hyperweave.ai
 [x]: https://x.com/InnerAuroraLabs
+[youtube]: https://www.youtube.com/@InnerAuroraLabs
