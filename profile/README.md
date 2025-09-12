@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/InnerAurora/.github/d4a1dfba63d6f7e126eae4aa1b0277e375efa087/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icon.svg" align="left" width="120">](https://innerauroralabs.com)
 
 ## &nbsp;&nbsp; InnerAurora Labs
 
@@ -39,21 +39,21 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   <!-- Social Icons -->
   <a href="https://github.com/InnerAurora/hyperweave">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/hyperweave.svg" width="12%"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/hyperweave.svg" width="12%"
       alt="Try HyperWeave"
       >
   </a>
   &nbsp;
   <a href="https://discord.gg/wVmcAZPQZ8">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/discord.svg" width="12%"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/discord.svg" width="12%"
       alt="Join us on Discord"
       >
   </a>
   &nbsp;
   <a href="https://www.instagram.com/hyperweave.ai/">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/instagram.svg" width="12%"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/instagram.svg" width="12%"
       alt="Instagram"
       >
   </a>
@@ -61,7 +61,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   <a href="https://www.linkedin.com/elisalamie/">
   <!-- <a href="https://www.linkedin.com/company/innerauroralabs/"> -->
     <img 
-    src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/linkedin.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/linkedin.svg"
     width="12%" 
     alt="LinkedIn"
     >
@@ -69,14 +69,14 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://www.tiktok.com/@hyperweave.ai">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/tiktok.svg" width="12%"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/tiktok.svg" width="12%"
       alt="TikTok"
       >
   </a>
   &nbsp;
   <a href="https://x.com/InnerAuroraLabs">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/x.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/x.svg"
       width="12%" 
       alt="X"
     >
@@ -84,7 +84,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://www.youtube.com/@InnerAuroraLabs">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/icons/youtube.svg" width="12%"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/icons/youtube.svg" width="12%"
       alt="YouTube"
       >
   </a>
@@ -94,7 +94,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
 <br clear="left"/>
 
 <img
-    src="https://raw.githubusercontent.com/InnerAurora/.github/20080ece0ed7b392d2c9fd4ecfaaf204bd2ff0ab/assets/divider.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/ea73fcdc1ea83a2489bb814d29e21f28713bc4ed/assets/divider.svg"
     alt="Divider"
     width="100%"
     height="auto"
