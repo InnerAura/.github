@@ -78,13 +78,13 @@
     </linearGradient>
     
     <!-- Glow filter for enhanced visual effect -->
-    <filter id="glow">
+    <!-- <filter id="glow">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
-    </filter>
+    </filter> -->
   </defs>
 
   <!-- Icon container -->
