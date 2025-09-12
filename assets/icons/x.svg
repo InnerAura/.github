@@ -1,82 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
-    <defs>
-        <radialGradient id="xHolo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:#ffffff">
-                <animate attributeName="stop-color" 
-                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
-                         dur="4s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="33%" style="stop-color:#ff0000">
-                <animate attributeName="stop-color" 
-                         values="#ff0000;#ffff00;#0000ff;#ff0000" 
-                         dur="5s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="66%" style="stop-color:#0000ff">
-                <animate attributeName="stop-color" 
-                         values="#0000ff;#00ffff;#ff0080;#0000ff" 
-                         dur="3s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="100%" style="stop-color:#000000"/>
-        </radialGradient>
-        
-        <filter id="xGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-            <feComponentTransfer>
-                <feFuncA type="linear" slope="0.6" />
-            </feComponentTransfer>
-            <feMerge>
-                <feMergeNode />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-        
-        <radialGradient id="pulseGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1">
-                <animate attributeName="stop-color"
-                         values="#FFFFFF;#ff0080;#0080ff;#FFFFFF" dur="6s"
-                         repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0">
-                <animate attributeName="stop-color"
-                         values="#0080ff;#FFFFFF;#ff0080;#0080ff" dur="6s"
-                         repeatCount="indefinite" />
-            </stop>
-        </radialGradient>
-    </defs>
-    
-    <!-- Animated background border -->
-    <rect x="9" y="9" width="46" height="46" rx="4" fill="none" 
-          stroke="url(#xHolo)" stroke-width="3" filter="url(#xGlow)">
-        <animate attributeName="stroke-width" values="3;5;3" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="rx" values="4;8;4" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    
-    <!-- X logo path with glow -->
-    <path fill="url(#xHolo)"
-          d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z"
-          filter="url(#xGlow)">
-        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Corner accent nodes with enhanced animation -->
-    <circle cx="9" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
-        <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="55" cy="9" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
-        <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="55" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
-        <animate attributeName="r" values="2;4;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="9" cy="55" r="2" fill="url(#xHolo)" filter="url(#xGlow)">
-        <animate attributeName="r" values="2;4;2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
+  <defs>
+    <!-- PRISMATIC DIAMOND GRADIENTS - LIGHT ADJUSTED (palette match) -->
+    <linearGradient id="prismRedLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  style="stop-color:#ff6666;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#ff0000;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ff0066;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ff0066;#ff00aa;#ff0033;#ff0066" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#ff00ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#cc0033;stop-opacity:1"/>
+    </linearGradient>
+
+    <linearGradient id="prismBlueLight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  style="stop-color:#6666ff;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#0000ff;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#0066ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0066ff;#00aaff;#0033ff;#0066ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#00ccff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0033cc;stop-opacity:1"/>
+    </linearGradient>
+
+    <linearGradient id="prismYellowLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"  style="stop-color:#ffffaa;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#ffff00;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ffcc00;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ffcc00;#ffaa00;#ffdd00;#ffcc00" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#ff9900;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#cc9900;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Holo core fill that cycles through palette -->
+    <radialGradient id="holoCore" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#ff66aa">
+        <animate attributeName="stop-color" values="#ff66aa;#ff0066;#ffa3d5;#ff66aa" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" stop-color="#66aaff">
+        <animate attributeName="stop-color" values="#66aaff;#0066ff;#00ccff;#66aaff" dur="8s" begin="0.6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="95%" stop-color="#ffcc33">
+        <animate attributeName="stop-color" values="#ffcc33;#ff9900;#ffff66;#ffcc33" dur="8s" begin="1.2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Outline gradient sweep -->
+    <linearGradient id="outlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ff0066"/>
+      <stop offset="50%" stop-color="#00aaff"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+      <animate attributeName="gradientTransform" values="translate(0,0);translate(1,0)" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.9"/>
+      <feColorMatrix type="matrix" values="1.25 0 0 0 0  0 1.25 0 0 0  0 0 1.25 0 0  0 0 0 1 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Diagonal sheen gradient -->
+    <linearGradient id="sheenGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Paths & clips -->
+    <path id="xPath" d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z"/>
+    <clipPath id="xClip"><use xlink:href="#xPath"/></clipPath>
+
+    <style>
+      * { vector-effect: non-scaling-stroke }
+    </style>
+  </defs>
+
+  <!-- Float + micro-tilt wrapper -->
+  <g transform="translate(0,0)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -0.8; 0 0; 0 0.8; 0 0"
+                      keyTimes="0;0.25;0.5;0.75;1"
+                      dur="6s" repeatCount="indefinite" calcMode="spline"
+                      keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
+    <g transform="rotate(0 32 32)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-2 32 32; 2 32 32; -2 32 32"
+                        keyTimes="0;0.5;1"
+                        dur="8s" repeatCount="indefinite" calcMode="spline"
+                        keySplines=".42 0 .58 1;.42 0 .58 1"/>
+
+      <!-- Rounded border with sweeping gradient + glint -->
+      <rect x="9" y="9" width="46" height="46" rx="4" fill="none"
+            stroke="url(#outlineGrad)" stroke-width="3" stroke-linecap="round" filter="url(#softGlow)">
+        <animate attributeName="stroke-opacity" values="0.7;1;0.7" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dasharray" values="0 220;30 220;0 220" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dashoffset" values="0;-160;0" dur="5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Main X shape -->
+      <use xlink:href="#xPath" fill="url(#holoCore)" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="1;0.96;1" dur="3.2s" repeatCount="indefinite"/>
+      </use>
+
+      <!-- Outline sweep on X -->
+      <use xlink:href="#xPath" fill="none" stroke="url(#outlineGrad)" stroke-width="1.6" opacity="0.85">
+        <animate attributeName="opacity" values="0.7;0.95;0.7" dur="5s" repeatCount="indefinite"/>
+      </use>
+
+      <!-- Diagonal sheen clipped to X -->
+      <g clip-path="url(#xClip)">
+        <rect x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="3.6s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Prismatic particles tracing the X path -->
+      <g>
+        <circle r="1.6" fill="url(#prismBlueLight)" opacity="0.95">
+          <animateMotion dur="6.8s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#xPath"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0.95;0.5;0.95" dur="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.4" fill="url(#prismRedLight)" opacity="0.95">
+          <animateMotion dur="6s" begin="0.6s" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#xPath"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0.95;0.5;0.95" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.3" fill="url(#prismYellowLight)" opacity="0.95">
+          <animateMotion dur="7.4s" begin="1.2s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#xPath"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0.95;0.5;0.95" dur="0.9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
 </svg>

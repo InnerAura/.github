@@ -1,72 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" style="vertical-align: middle;">
-    <defs>
-        <radialGradient id="docsHolo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:#ffffff">
-                <animate attributeName="stop-color" 
-                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
-                         dur="4s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="33%" style="stop-color:#ff0000">
-                <animate attributeName="stop-color" 
-                         values="#ff0000;#ffff00;#0000ff;#ff0000" 
-                         dur="5s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="66%" style="stop-color:#0000ff">
-                <animate attributeName="stop-color" 
-                         values="#0000ff;#00ffff;#ff0080;#0000ff" 
-                         dur="3s" 
-                         repeatCount="indefinite"/>
-            </stop>
-            <stop offset="100%" style="stop-color:#000000"/>
-        </radialGradient>
-        
-        <filter id="docsGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
-            <feComponentTransfer>
-                <feFuncA type="linear" slope="0.5" />
-            </feComponentTransfer>
-            <feMerge>
-                <feMergeNode />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-    </defs>
-    
-    <!-- Background glow -->
-    <rect x="12" y="6" width="40" height="52" rx="2" fill="url(#docsHolo)" opacity="0.2" filter="url(#docsGlow)">
-        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    
-    <!-- Main document shape -->
-    <path fill="url(#docsHolo)"
-          d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z M50,55c0,0.55-0.45,1-1,1H15c-0.55,0-1-0.45-1-1V9c0-0.55,0.45-1,1-1h25v7c0,1.65,1.35,3,3,3h7V55z">
-        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Animated text lines - more subtle animation -->
-    <rect x="23" y="31" width="18" height="2" fill="url(#docsHolo)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="23" y="35" width="18" height="2" fill="url(#docsHolo)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="23" y="39" width="18" height="2" fill="url(#docsHolo)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="23" y="43" width="10" height="2" fill="url(#docsHolo)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-    </rect>
-    
-    <!-- Corner fold with pulse -->
-    <path fill="url(#docsHolo)" d="M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z" opacity="0.5" filter="url(#docsGlow)">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Data pulse moving along the text -->
-    <circle cx="23" cy="32" r="2" fill="#ffffff" filter="url(#docsGlow)">
-        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1s" repeatCount="indefinite"/>
-        <animateMotion path="M 0 0 L 18 0 L 18 12 L 0 12 Z" dur="4s" repeatCount="indefinite"/>
-    </circle>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+  <defs>
+    <!-- PRISMATIC DIAMOND GRADIENTS - LIGHT ADJUSTED (palette match) -->
+    <linearGradient id="prismRedLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  style="stop-color:#ff6666;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#ff0000;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ff0066;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ff0066;#ff00aa;#ff0033;#ff0066" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#ff00ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#cc0033;stop-opacity:1"/>
+    </linearGradient>
+
+    <linearGradient id="prismBlueLight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  style="stop-color:#6666ff;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#0000ff;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#0066ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0066ff;#00aaff;#0033ff;#0066ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#00ccff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0033cc;stop-opacity:1"/>
+    </linearGradient>
+
+    <linearGradient id="prismYellowLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"  style="stop-color:#ffffaa;stop-opacity:1"/>
+      <stop offset="20%" style="stop-color:#ffff00;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ffcc00;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ffcc00;#ffaa00;#ffdd00;#ffcc00" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#ff9900;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#cc9900;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Holo core fill that cycles through palette -->
+    <radialGradient id="holoCore" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#ff66aa">
+        <animate attributeName="stop-color" values="#ff66aa;#ff0066;#ffa3d5;#ff66aa" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" stop-color="#66aaff">
+        <animate attributeName="stop-color" values="#66aaff;#0066ff;#00ccff;#66aaff" dur="8s" begin="0.6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="95%" stop-color="#ffcc33">
+        <animate attributeName="stop-color" values="#ffcc33;#ff9900;#ffff66;#ffcc33" dur="8s" begin="1.2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Outline gradient sweep -->
+    <linearGradient id="outlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ff0066"/>
+      <stop offset="50%" stop-color="#00aaff"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+      <animate attributeName="gradientTransform" values="translate(0,0);translate(1,0)" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.9"/>
+      <feColorMatrix type="matrix" values="1.25 0 0 0 0  0 1.25 0 0 0  0 0 1.25 0 0  0 0 0 1 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Diagonal sheen gradient -->
+    <linearGradient id="sheenGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Clip to doc shape -->
+    <clipPath id="docClip">
+      <path d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z M50,55c0,0.55-0.45,1-1,1H15c-0.55,0-1-0.45-1-1V9c0-0.55,0.45-1,1-1h25v7c0,1.65,1.35,3,3,3h7V55z"/>
+    </clipPath>
+
+    <style>
+      * { vector-effect: non-scaling-stroke }
+    </style>
+  </defs>
+
+  <!-- Float + micro-tilt wrapper -->
+  <g transform="translate(0,0)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -0.8; 0 0; 0 0.8; 0 0"
+                      keyTimes="0;0.25;0.5;0.75;1"
+                      dur="6s" repeatCount="indefinite" calcMode="spline"
+                      keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
+    <g transform="rotate(0 32 32)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-2 32 32; 2 32 32; -2 32 32"
+                        keyTimes="0;0.5;1"
+                        dur="8s" repeatCount="indefinite" calcMode="spline"
+                        keySplines=".42 0 .58 1;.42 0 .58 1"/>
+
+      <!-- Document body -->
+      <path fill="url(#holoCore)" filter="url(#softGlow)"
+            d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z M50,55c0,0.55-0.45,1-1,1H15c-0.55,0-1-0.45-1-1V9c0-0.55,0.45-1,1-1h25v7c0,1.65,1.35,3,3,3h7V55z">
+        <animate attributeName="opacity" values="1;0.96;1" dur="3.2s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Outline sweep -->
+      <path d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z"
+            fill="none" stroke="url(#outlineGrad)" stroke-width="1.4" opacity="0.85">
+        <animate attributeName="opacity" values="0.7;0.95;0.7" dur="5s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Fold (ear) with gentle flip -->
+      <path d="M42,9.41 L48.59,16 H43 Z" fill="url(#prismYellowLight)">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-6 48 16; 6 48 16; -6 48 16"
+                          dur="6s" repeatCount="indefinite" calcMode="spline"
+                          keySplines=".42 0 .58 1;.42 0 .58 1"/>
+      </path>
+
+      <!-- Sheen across the page, clipped to doc -->
+      <g clip-path="url(#docClip)">
+        <rect x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Typing / scan lines -->
+      <!-- Mask that sweeps left-to-right to "write" each line -->
+      <mask id="lineReveal">
+        <rect x="0" y="0" width="64" height="64" fill="#000"/>
+        <rect id="sweep" x="18" y="20" width="0" height="28" rx="2" fill="#fff">
+          <animate attributeName="width" values="0;28;28;0" keyTimes="0;0.35;0.6;1" dur="4s" repeatCount="indefinite"/>
+        </rect>
+      </mask>
+
+      <!-- Lines group (uses reveal mask and alternating prismatic fills) -->
+      <g mask="url(#lineReveal)">
+        <rect x="23" y="30" width="18" height="2" rx="1" fill="url(#prismRedLight)">
+          <animate attributeName="width" values="0;18;18;0" keyTimes="0;0.35;0.6;1" dur="4s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="23" y="34" width="22" height="2" rx="1" fill="url(#prismBlueLight)">
+          <animate attributeName="width" values="0;22;22;0" keyTimes="0;0.35;0.6;1" dur="4s" begin="0.25s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="23" y="38" width="20" height="2" rx="1" fill="url(#prismYellowLight)">
+          <animate attributeName="width" values="0;20;20;0" keyTimes="0;0.35;0.6;1" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="23" y="42" width="12" height="2" rx="1" fill="url(#prismBlueLight)">
+          <animate attributeName="width" values="0;12;12;0" keyTimes="0;0.35;0.6;1" dur="4s" begin="0.75s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Cursor glint following the active line -->
+      <rect x="23" y="30" width="1.8" height="2.6" fill="#fff" opacity="0.9">
+        <animate attributeName="x" values="23;41;23" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="30;34;38;42;30" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="0.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
 </svg>

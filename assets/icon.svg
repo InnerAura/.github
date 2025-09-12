@@ -1,131 +1,417 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-    <defs>
-        <radialGradient id="circularHolo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:#ffffff">
-                <animate attributeName="stop-color"
-                         values="#ffffff;#ff0080;#0080ff;#ffffff" 
-                         dur="4s"
-                         repeatCount="indefinite" />
-            </stop>
-            <stop offset="33%" style="stop-color:#ff0000">
-                <animate attributeName="stop-color"
-                         values="#ff0000;#ffff00;#0000ff;#ff0000" 
-                         dur="5s"
-                         repeatCount="indefinite" />
-            </stop>
-            <stop offset="66%" style="stop-color:#0000ff">
-                <animate attributeName="stop-color"
-                         values="#0000ff;#00ffff;#ff0080;#0000ff" 
-                         dur="3s"
-                         repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" style="stop-color:#000000" />
-        </radialGradient>
-        
-        <filter id="circularGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
-            <feComponentTransfer>
-                <feFuncA type="linear" slope="0.4" />
-            </feComponentTransfer>
-            <feMerge>
-                <feMergeNode />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-        
-        <radialGradient id="centerParticle" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1">
-                <animate attributeName="stop-color"
-                         values="#FFFFFF;#ff0080;#0080ff;#FFFFFF" dur="6s"
-                         repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0">
-                <animate attributeName="stop-color"
-                         values="#0080ff;#FFFFFF;#ff0080;#0080ff" dur="6s"
-                         repeatCount="indefinite" />
-            </stop>
-        </radialGradient>
-        
-        <clipPath id="circularShape">
-            <circle cx="128" cy="128" r="108" />
-        </clipPath>
-    </defs>
-    
-    <!-- Multi-layer glow effect -->
-    <circle cx="128" cy="128" r="115" fill="url(#circularHolo)" opacity="0.2" filter="url(#circularGlow)">
-        <animate attributeName="r" values="115;120;115" dur="4s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="128" cy="128" r="112" fill="url(#circularHolo)" opacity="0.3" />
-    <circle cx="128" cy="128" r="110" fill="url(#circularHolo)" opacity="0.5" />
-    
-    <!-- Main circular background -->
-    <circle cx="128" cy="128" r="108" fill="url(#circularHolo)" />
-    
-    <!-- Geometric composition within circle -->
-    <g clip-path="url(#circularShape)">
-        <!-- Triangular sections with enhanced animations -->
-        <path d="M 128 20 L 236 128 L 128 128 Z" fill="#ff0080" opacity="0.8" filter="url(#circularGlow)">
-            <animate attributeName="opacity" 
-                     values="0.6;1;0.6" 
-                     dur="4s"
-                     repeatCount="indefinite" />
-            <animate attributeName="fill"
-                     values="#ff0080;#0080ff;#ff0080"
-                     dur="6s"
-                     repeatCount="indefinite" />
-        </path>
-        <path d="M 128 128 L 236 128 L 128 236 Z" fill="#0080ff" opacity="0.8" filter="url(#circularGlow)">
-            <animate attributeName="opacity" 
-                     values="0.8;0.6;0.8" 
-                     dur="3s"
-                     repeatCount="indefinite" />
-            <animate attributeName="fill"
-                     values="#0080ff;#ffff00;#0080ff"
-                     dur="5s"
-                     repeatCount="indefinite" />
-        </path>
-        <path d="M 20 128 L 128 128 L 128 236 Z" fill="#ffff00" opacity="0.7" filter="url(#circularGlow)">
-            <animate attributeName="opacity" 
-                     values="0.5;0.9;0.5" 
-                     dur="5s"
-                     repeatCount="indefinite" />
-            <animate attributeName="fill"
-                     values="#ffff00;#ff00ff;#ffff00"
-                     dur="4s"
-                     repeatCount="indefinite" />
-        </path>
-        
-        <!-- Structural lines with glow -->
-        <line x1="128" y1="20" x2="128" y2="236" stroke="#ffffff" stroke-width="6" opacity="0.3" filter="url(#circularGlow)">
-            <animate attributeName="stroke-width" values="6;8;6" dur="3s" repeatCount="indefinite" />
-        </line>
-        <line x1="20" y1="128" x2="236" y2="128" stroke="#ffffff" stroke-width="6" opacity="0.3" filter="url(#circularGlow)">
-            <animate attributeName="stroke-width" values="6;8;6" dur="3s" begin="1.5s" repeatCount="indefinite" />
-        </line>
-        
-        <!-- Central point with pulse -->
-        <circle cx="128" cy="128" r="12" fill="#ffffff" stroke="url(#circularHolo)" stroke-width="3" filter="url(#circularGlow)">
-            <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite" />
-            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" />
-        </circle>
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Prismatic gradients -->
+    <linearGradient id="prismRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#ff0000"/>
+      <stop offset="16%" stop-color="#ff3333"/>
+      <stop offset="33%" stop-color="#ff0066"/>
+      <stop offset="50%" stop-color="#ff00ff"/>
+      <stop offset="66%" stop-color="#cc0066"/>
+      <stop offset="83%" stop-color="#990033"/>
+      <stop offset="100%" stop-color="#660000"/>
+      <animate attributeName="gradientTransform" values="rotate(0 .5 .5);rotate(360 .5 .5)" dur="16s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="prismBlue" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#0000ff"/>
+      <stop offset="16%" stop-color="#3333ff"/>
+      <stop offset="33%" stop-color="#0066ff"/>
+      <stop offset="50%" stop-color="#00ffff"/>
+      <stop offset="66%" stop-color="#0066cc"/>
+      <stop offset="83%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#000066"/>
+      <animate attributeName="gradientTransform" values="rotate(0 .5 .5);rotate(-360 .5 .5)" dur="18s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="prismYellow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ffff00"/>
+      <stop offset="16%" stop-color="#ffff33"/>
+      <stop offset="33%" stop-color="#ffcc00"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="66%" stop-color="#cc9900"/>
+      <stop offset="83%" stop-color="#996600"/>
+      <stop offset="100%" stop-color="#666600"/>
+      <animate attributeName="gradientTransform" values="rotate(0 .5 .5);rotate(360 .5 .5)" dur="20s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Diamond refraction -->
+    <filter id="diamondRefraction" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2">
+        <animate attributeName="stdDeviation" values="2;3;2" dur="6s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feColorMatrix values="2 0 0 0 0  0 2 0 0 0  0 0 2 0 0  0 0 0 1 0"/>
+      <feOffset dx="2" dy="2" result="off"/>
+      <feFlood flood-color="#ffffff" flood-opacity="0.28">
+        <animate attributeName="flood-opacity" values="0.18;0.34;0.18" dur="6s" repeatCount="indefinite"/>
+      </feFlood>
+      <feComposite in2="off" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- PRISMATIC DIAMOND GRADIENTS - LIGHT ADJUSTED -->
+    <linearGradient id="prismRedLight" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#ff6666;stop-opacity:1" />
+        <stop offset="20%" style="stop-color:#ff0000;stop-opacity:1" />
+        <stop offset="40%" style="stop-color:#ff0066;stop-opacity:1">
+            <animate attributeName="stop-color"
+                        values="#ff0066;#ff00aa;#ff0033;#ff0066" dur="6s"
+                        repeatCount="indefinite" />
+        </stop>
+        <stop offset="70%" style="stop-color:#ff00ff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#cc0033;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prismBlueLight" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#6666ff;stop-opacity:1" />
+        <stop offset="20%" style="stop-color:#0000ff;stop-opacity:1" />
+        <stop offset="40%" style="stop-color:#0066ff;stop-opacity:1">
+            <animate attributeName="stop-color"
+                        values="#0066ff;#00aaff;#0033ff;#0066ff" dur="6s"
+                        repeatCount="indefinite" />
+        </stop>
+        <stop offset="70%" style="stop-color:#00ccff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#0033cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prismYellowLight" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#ffffaa;stop-opacity:1" />
+        <stop offset="20%" style="stop-color:#ffff00;stop-opacity:1" />
+        <stop offset="40%" style="stop-color:#ffcc00;stop-opacity:1">
+            <animate attributeName="stop-color"
+                        values="#ffcc00;#ffaa00;#ffdd00;#ffcc00" dur="6s"
+                        repeatCount="indefinite" />
+        </stop>
+        <stop offset="70%" style="stop-color:#ff9900;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#cc9900;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Crystal shimmer -->
+    <radialGradient id="crystalShimmer">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Z-depth shadow -->
+    <filter id="zDepth" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.0" flood-color="#000" flood-opacity="0.35">
+        <animate attributeName="dx" values="0;1.2;0;-1.2;0" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="dy" values="0;1.0;0;-1.0;0" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="stdDeviation" values="0;1.2;0.6;1.2;0" dur="8s" repeatCount="indefinite"/>
+      </feDropShadow>
+    </filter>
+
+    <style>
+      * { vector-effect: non-scaling-stroke }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="240" height="240" rx="12" fill="#ffffff"/>
+
+  <!-- EXPANSION: breathe the whole mosaic -->
+  <g transform="translate(120 120)">
+    <g id="expScale" transform="scale(1)">
+      <animateTransform attributeName="transform" type="scale"
+                        values="0.94;1.02;0.94"
+                        keyTimes="0;0.5;1"
+                        dur="12s" repeatCount="indefinite"
+                        calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1"/>
+      <g transform="translate(-120 -120)">
+        <!-- ROTATED 45° GRID CANVAS -->
+        <g transform="translate(120 120) rotate(45) translate(-120 -120)" filter="url(#zDepth)">
+          <!-- Grid lines -->
+          <g stroke="#000" stroke-width="6" fill="none" opacity="0.92">
+            <line x1="80"  y1="20" x2="80"  y2="220"/>
+            <line x1="160" y1="20" x2="160" y2="220"/>
+            <line x1="20"  y1="80" x2="220" y2="80"/>
+            <line x1="20"  y1="160" x2="220" y2="160"/>
+          </g>
+
+          <!-- ===== 3x3 CELLS (Musical Chairs with Lock Phases) =====
+               Timeline (dur=24s):
+               0s–4s   : Phase 1 (row-right slide)
+               4s–5s   : LOCK 1
+               5s–9s   : Phase 2 (column-down slide)
+               9s–10s  : LOCK 2
+               10s–14s : Phase 3 (return-to-home)
+               14s–16s : LOCK 3
+               16s–24s : idle/expansion ambience
+          -->
+          <!-- KeyTimes used by all move animations -->
+          <!-- 0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1 -->
+
+          <!-- Helper: common attributes -->
+          <g id="cells">
+            <!-- CELL TL (center 50,50) -->
+            <g id="cell-tl">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 70; 70 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <!-- depth pulse while moving -->
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.0833;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite" calcMode="spline"
+                                    keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                  <!-- local spin on each move -->
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 50 50;90 50 50;90 50 50;180 50 50;180 50 50;360 50 50;360 50 50;360 50 50"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite" calcMode="spline"
+                                    keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                  <rect x="24" y="24" width="52" height="52" fill="url(#prismRed)" filter="url(#diamondRefraction)">
+                    <!-- color re-seat on locks -->
+                    <animate attributeName="fill"
+                             values="url(#prismRed);url(#prismBlue);url(#prismYellow);url(#prismRed)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="24" y="24" width="52" height="52" fill="url(#prismYellowLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL TM (center 120,50) -->
+            <g id="cell-tm">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 70; 70 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.92;0.92;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 120 50;-90 120 50;-90 120 50;0 120 50;0 120 50;180 120 50;180 120 50;180 120 50"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite" calcMode="spline"
+                                    keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                  <rect x="84" y="24" width="72" height="52" fill="url(#prismBlue)" filter="url(#diamondRefraction)">
+                    <animate attributeName="fill"
+                             values="url(#prismBlue);url(#prismYellow);url(#prismRed);url(#prismBlue)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="84" y="24" width="72" height="52" fill="url(#prismRedLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL TR (center 190,50) -->
+            <g id="cell-tr">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; -140 0; -140 0; -140 70; -140 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 190 50;90 190 50;90 190 50;0 190 50;0 190 50;180 190 50;180 190 50;180 190 50"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="164" y="24" width="52" height="52" fill="#0033cc"/>
+                  <rect x="164" y="24" width="52" height="52" fill="url(#prismBlueLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL ML (center 50,120) -->
+            <g id="cell-ml">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 70; 70 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 50 120;-90 50 120;-90 50 120;0 50 120;0 50 120;180 50 120;180 50 120;180 50 120"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="24" y="84" width="52" height="72" fill="url(#prismYellow)" filter="url(#diamondRefraction)">
+                    <animate attributeName="fill"
+                             values="url(#prismYellow);url(#prismRed);url(#prismBlue);url(#prismYellow)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="24" y="84" width="52" height="72" fill="url(#prismBlueLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL MC (center 120,120) -->
+            <g id="cell-mc">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 70; 70 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.92;0.92;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 120 120;180 120 120;180 120 120;360 120 120;360 120 120;360 120 120;360 120 120;360 120 120"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="84" y="84" width="72" height="72" fill="#000000"/>
+                  <rect x="86" y="86" width="68" height="68" fill="rgba(255,255,255,0.1)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL MR (center 190,120) -->
+            <g id="cell-mr">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; -140 0; -140 0; -140 70; -140 70; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 190 120;90 190 120;90 190 120;0 190 120;0 190 120;180 190 120;180 190 120;180 190 120"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="164" y="84" width="52" height="72" fill="url(#prismRed)" filter="url(#diamondRefraction)">
+                    <animate attributeName="fill"
+                             values="url(#prismRed);url(#prismBlue);url(#prismYellow);url(#prismRed)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="164" y="84" width="52" height="72" fill="url(#prismRedLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL BL (center 50,190) -->
+            <g id="cell-bl">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 -140; 70 -140; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.92;0.92;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 50 190;-90 50 190;-90 50 190;0 50 190;0 50 190;180 50 190;180 50 190;180 50 190"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="24" y="164" width="52" height="52" fill="url(#prismRedLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL BM (center 120,190) -->
+            <g id="cell-bm">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; 70 0; 70 0; 70 -140; 70 -140; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 120 190;90 120 190;90 120 190;0 120 190;0 120 190;180 120 190;180 120 190;180 120 190"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="84" y="164" width="72" height="52" fill="url(#prismYellow)" filter="url(#diamondRefraction)">
+                    <animate attributeName="fill"
+                             values="url(#prismYellow);url(#prismRed);url(#prismBlue);url(#prismYellow)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="84" y="164" width="72" height="52" fill="url(#prismBlueLight)"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- CELL BR (center 190,190) -->
+            <g id="cell-br">
+              <g class="move">
+                <animateTransform attributeName="transform" type="translate"
+                  values="0 0; -140 0; -140 0; -140 -140; -140 -140; 0 0; 0 0; 0 0"
+                  keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                  dur="24s" repeatCount="indefinite" calcMode="spline"
+                  keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"/>
+                <g class="spin">
+                  <animateTransform attributeName="transform" type="scale" additive="sum"
+                                    values="1;0.9;0.9;1;1;1;1;1"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="rotate" additive="sum"
+                                    values="0 190 190;90 190 190;90 190 190;0 190 190;0 190 190;180 190 190;180 190 190;180 190 190"
+                                    keyTimes="0;0.1667;0.2083;0.375;0.4167;0.5833;0.6667;1"
+                                    dur="24s" repeatCount="indefinite"/>
+                  <rect x="164" y="164" width="52" height="52" fill="url(#prismBlue)" filter="url(#diamondRefraction)">
+                    <animate attributeName="fill"
+                             values="url(#prismBlue);url(#prismYellow);url(#prismRed);url(#prismBlue)"
+                             keyTimes="0;0.2083;0.4167;0.6667"
+                             dur="24s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="164" y="164" width="52" height="52" fill="url(#prismYellowLight)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
     </g>
-    
-    <!-- Orbiting particles (like README-AI) -->
-    <g>
-        <circle cx="0" cy="0" r="4" fill="url(#centerParticle)" filter="url(#circularGlow)">
-            <animateMotion path="M 128 128 a 90 90 0 1 1 0 1" dur="8s" repeatCount="indefinite" />
-            <animate attributeName="r" values="4;6;4" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="0" cy="0" r="3" fill="url(#centerParticle)" filter="url(#circularGlow)">
-            <animateMotion path="M 128 128 a 75 75 0 1 0 0 1" dur="6s" repeatCount="indefinite" />
-            <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="0" cy="0" r="3.5" fill="url(#centerParticle)" filter="url(#circularGlow)">
-            <animateMotion path="M 128 128 a 100 100 0 1 1 0 1" dur="10s" repeatCount="indefinite" />
-            <animate attributeName="r" values="3.5;5.5;3.5" dur="5s" repeatCount="indefinite" />
-        </circle>
+  </g>
+
+  <!-- Central neural diamond -->
+  <g transform="translate(120, 120)">
+    <g transform="rotate(45)">
+      <rect x="-20" y="-20" width="40" height="40" fill="none" stroke="url(#prismYellow)" stroke-width="2" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="24s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="url(#prismRed)" stroke-width="1" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="18s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-10" y="-10" width="20" height="20" fill="none" stroke="url(#prismBlue)" stroke-width="1" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="12s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-5" y="-5" width="10" height="10" fill="url(#prismYellow)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="3.6s" repeatCount="indefinite"
+                          calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1" keyTimes="0;0.5;1"/>
+      </rect>
     </g>
-    
-    <!-- Outer border -->
-    <circle cx="128" cy="128" r="108" fill="none" stroke="#000000" stroke-width="8" />
+  </g>
+
+  <!-- Frame -->
+  <rect x="20" y="20" width="200" height="200" rx="8" fill="none" stroke="#000000" stroke-width="5">
+    <animate attributeName="opacity" values="1;0.92;1" dur="12s" repeatCount="indefinite"/>
+  </rect>
 </svg>
