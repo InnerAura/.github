@@ -29,6 +29,22 @@ We're developing foundational tools and frameworks that enable developers to cre
 - <img src="/assets/icons/discord.svg" width="25%" alt="Discord">
 - <img src="/assets/icons/x.svg" width="25%" alt="X">
 
+<!-- GITHUB README VERSION — single image + image map (aligned rows, full-card hitboxes) -->
+<img
+  src="./assets/social-ribbons.svg?sanitize=true"
+  alt="HyperWeave Social Links"
+  width="920"
+  height="340"
+  usemap="#social-links"
+/>
+
+<map name="social-links">
+  <area shape="rect" coords="40,50,400,114" href="https://discord.gg/wVmcAZPQZ8" alt="Discord" />
+  <area shape="rect" coords="500,50,860,114" href="https://x.com/InnerAuroraLabs" alt="X" />
+  <area shape="rect" coords="40,196,400,260" href="https://github.com/InnerAurora/hyperweave" alt="Try HyperWeave" />
+  <area shape="rect" coords="500,196,860,260" href="https://github.com/InnerAurora/hyperweave" alt="Docs & Guides" />
+</map>
+
 <img 
     src="/assets/divider.svg"
     alt="Thematic Break"

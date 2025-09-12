@@ -1,0 +1,184 @@
+<!-- SOCIAL SECTION — ALIGNED 2×2 GRID • HOVERABLE + CLICKABLE (INLINE SVG VERSION) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="340" viewBox="0 0 920 340" style="vertical-align:middle">
+  <defs>
+    <!-- Brand prismatic sweep -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ff3d7a"/>
+      <stop offset="50%" stop-color="#16a4ff"/>
+      <stop offset="100%" stop-color="#ffbf2d"/>
+      <animate attributeName="gradientTransform" values="translate(0,0);translate(.7,0);translate(0,0)" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+    <!-- Holo core -->
+    <radialGradient id="holoCore" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="40%" stop-color="#ff5fa1">
+        <animate attributeName="stop-color" values="#ff5fa1;#ff2a77;#ff9fd0;#ff5fa1" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="75%" stop-color="#5fb7ff">
+        <animate attributeName="stop-color" values="#5fb7ff;#1e7aff;#00d0ff;#5fb7ff" dur="10s" begin=".6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="96%" stop-color="#ffcc33">
+        <animate attributeName="stop-color" values="#ffcc33;#ff9a00;#ffef66;#ffcc33" dur="10s" begin="1.2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+    <!-- Collab gradient -->
+    <linearGradient id="collabGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#ff3d7a"/>
+      <stop offset="30%" stop-color="#ffbf2d"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#16a4ff"/>
+      <stop offset="100%" stop-color="#00d0ff"/>
+      <animate attributeName="gradientTransform" values="translate(-.4,0);translate(.4,0);translate(-.4,0)" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <!-- FX -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.55"/>
+      <feColorMatrix type="matrix" values="1.12 0 0 0 0  0 1.12 0 0 0  0 0 1.12 0 0  0 0 0 1 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="sheenGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="42%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="58%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Icons -->
+    <path id="xPath" d="M26.978,22l14.108,20h-3.063L23.914,22H26.978z M44.914,44L34.789,29.613L43,20h-2.5l-6.841,8.009L28.022,20h-7.937l9.222,13.103L20,44h2.5l7.937-9.292L36.978,44H44.914z"/>
+    <path id="discordPath" d="M52.263,15.938c-4.816-3.871-13.024-4.925-13.372-4.968c-0.437-0.057-0.855,0.182-1.035,0.583c-0.025,0.055-0.543,1.23-0.778,2.782C35.086,14.073,33.313,14,31.983,14c-1.373,0-3.216,0.076-5.289,0.36c-0.233-1.564-0.757-2.753-0.782-2.808c-0.18-0.401-0.598-0.636-1.039-0.583c-0.337,0.043-8.322,1.099-13.188,5.013C9.122,18.35,4,32.125,4,44c0,0.173,0.045,0.344,0.131,0.495c3.427,6.02,13.558,8.432,15.837,8.505c0.011,0,0.021,0,0.032,0c0.303,0,0.591-0.138,0.781-0.375l3.495-4.368C26.519,48.703,29.098,49,32.024,49c2.911,0,5.474-0.294,7.706-0.737l3.49,4.362C43.409,52.862,43.697,53,44,53c0.011,0,0.021,0,0.032,0c2.274-0.073,12.39-2.495,15.835-8.547c0.086-0.15,0.131-0.321,0.131-0.495C59.999,32.105,54.877,18.349,52.263,15.938z M24 30A4 4.5 0 1 0 24 39A4 4.5 0 1 0 24 30Z M39.938 30A3.938 4.5 0 1 0 39.938 39A3.938 4.5 0 1 0 39.938 30Z"/>
+    <path id="playPath" d="M26 20 L26 44 L46 32 Z"/>
+    <path id="docPath" d="M51.12,15.71l-8.83-8.83C41.73,6.31,40.97,6,40.17,6H15c-1.65,0-3,1.35-3,3v46 c0,1.65,1.35,3,3,3h34c1.65,0,3-1.35,3-3V17.83C52,17.03,51.69,16.27,51.12,15.71z M42,9.41L48.59,16H43c-0.55,0-1-0.45-1-1V9.41z M50,55c0,0.55-0.45,1-1,1H15c-0.55,0-1-0.45-1-1V9c0-0.55,0.45-1,1-1h25v7c0,1.65,1.35,3,3,3h7V55z"/>
+    <clipPath id="xClip"><use href="#xPath"/></clipPath>
+    <clipPath id="discordClip"><use href="#discordPath"/></clipPath>
+    <clipPath id="playClip"><use href="#playPath"/></clipPath>
+    <clipPath id="docClip"><use href="#docPath"/></clipPath>
+    <style>
+      .label{font:900 22px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;letter-spacing:.25px}
+      .card{transform-box:fill-box;transform-origin:50% 50%;transition:transform .28s cubic-bezier(.2,.7,.2,1), opacity .28s}
+      .border{transition:stroke-width .28s, opacity .28s}
+      .underline{opacity:.85;transition:opacity .25s}
+      .nope{pointer-events:none}
+      a{cursor:pointer}
+      a:hover .card{transform:scale(1.035)}
+      a:hover .border{stroke-width:3;opacity:1}
+      a:hover .underline{opacity:1}
+      a:hover .label{letter-spacing:.45px}
+    </style>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect x="0" y="0" width="920" height="340" rx="14" fill="#0a0a0a" opacity="0.02"/>
+  <rect x="12" y="12" width="896" height="316" rx="12" fill="none" stroke="url(#brandGrad)" stroke-width="1.5" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="12s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== Perfectly aligned rows (top: y=50, bottom: y=196) ===== -->
+
+  <!-- Discord (top-left) -->
+  <a href="https://discord.gg/your-invite" target="_blank" rel="noopener noreferrer">
+    <g class="card" transform="translate(40,50)">
+      <rect class="border" x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)"/>
+      <use href="#discordPath" fill="url(#holoCore)" filter="url(#softGlow)"/>
+      <use href="#discordPath" fill="none" stroke="url(#collabGrad)" stroke-width="1.6" opacity="0.9"/>
+      <g clip-path="url(#discordClip)">
+        <rect class="nope" x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="5.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g filter="url(#softGlow)">
+        <text class="label" x="84" y="32" fill="url(#collabGrad)" dominant-baseline="middle">JOIN DISCORD</text>
+        <text class="label" x="84" y="32" fill="none" stroke="url(#brandGrad)" stroke-width="0.8" stroke-linejoin="round" dominant-baseline="middle">JOIN DISCORD</text>
+      </g>
+      <g>
+        <rect class="underline" x="84" y="44" width="238" height="2" rx="1" fill="url(#brandGrad)"/>
+        <!-- local path (row-aligned) -->
+        <circle r="2.2" fill="#ff3d7a" opacity="0.95">
+          <animateMotion dur="3.4s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+        <circle r="2" fill="#16a4ff" opacity="0.9">
+          <animateMotion dur="3.4s" begin=".5s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+      </g>
+    </g>
+  </a>
+
+  <!-- X / Twitter (top-right, aligned y=50) -->
+  <a href="https://x.com/yourhandle" target="_blank" rel="noopener noreferrer">
+    <g class="card" transform="translate(500,50)">
+      <rect class="border" x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)"/>
+      <use href="#xPath" fill="url(#holoCore)" filter="url(#softGlow)"/>
+      <use href="#xPath" fill="none" stroke="url(#collabGrad)" stroke-width="1.6" opacity="0.9"/>
+      <g clip-path="url(#xClip)">
+        <rect class="nope" x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="5.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g filter="url(#softGlow)">
+        <text class="label" x="84" y="32" fill="url(#collabGrad)" dominant-baseline="middle">FOLLOW UPDATES</text>
+        <text class="label" x="84" y="32" fill="none" stroke="url(#brandGrad)" stroke-width="0.8" stroke-linejoin="round" dominant-baseline="middle">FOLLOW UPDATES</text>
+      </g>
+      <g>
+        <rect class="underline" x="84" y="44" width="238" height="2" rx="1" fill="url(#brandGrad)"/>
+        <circle r="2.2" fill="#ff3d7a" opacity="0.95">
+          <animateMotion dur="3.4s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+        <circle r="2" fill="#16a4ff" opacity="0.9">
+          <animateMotion dur="3.4s" begin=".5s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+      </g>
+    </g>
+  </a>
+
+  <!-- Try HyperWeave (bottom-left, aligned y=196) -->
+  <a href="https://your.site/try" target="_blank" rel="noopener noreferrer">
+    <g class="card" transform="translate(40,196)">
+      <rect class="border" x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)"/>
+      <use href="#playPath" fill="url(#holoCore)" filter="url(#softGlow)"/>
+      <use href="#playPath" fill="none" stroke="url(#collabGrad)" stroke-width="1.6" opacity="0.9"/>
+      <g clip-path="url(#playClip)">
+        <rect class="nope" x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="5.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g filter="url(#softGlow)">
+        <text class="label" x="84" y="32" fill="url(#collabGrad)" dominant-baseline="middle">TRY HYPERWEAVE</text>
+        <text class="label" x="84" y="32" fill="none" stroke="url(#brandGrad)" stroke-width="0.8" stroke-linejoin="round" dominant-baseline="middle">TRY HYPERWEAVE</text>
+      </g>
+      <g>
+        <rect class="underline" x="84" y="44" width="238" height="2" rx="1" fill="url(#brandGrad)"/>
+        <circle r="2.2" fill="#ff3d7a" opacity="0.95">
+          <animateMotion dur="3.4s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+        <circle r="2" fill="#16a4ff" opacity="0.9">
+          <animateMotion dur="3.4s" begin=".5s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+      </g>
+    </g>
+  </a>
+
+  <!-- Docs (bottom-right, aligned y=196) -->
+  <a href="https://docs.your-site.com/" target="_blank" rel="noopener noreferrer">
+    <g class="card" transform="translate(500,196)">
+      <rect class="border" x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)"/>
+      <use href="#docPath" fill="url(#holoCore)" filter="url(#softGlow)"/>
+      <use href="#docPath" fill="none" stroke="url(#collabGrad)" stroke-width="1.6" opacity="0.9"/>
+      <g clip-path="url(#docClip)">
+        <rect class="nope" x="-96" y="-16" width="160" height="96" fill="url(#sheenGrad)">
+          <animate attributeName="x" values="-96;64;-96" dur="5.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g filter="url(#softGlow)">
+        <text class="label" x="84" y="32" fill="url(#collabGrad)" dominant-baseline="middle">DOCS &amp; GUIDES</text>
+        <text class="label" x="84" y="32" fill="none" stroke="url(#brandGrad)" stroke-width="0.8" stroke-linejoin="round" dominant-baseline="middle">DOCS &amp; GUIDES</text>
+      </g>
+      <g>
+        <rect class="underline" x="84" y="44" width="238" height="2" rx="1" fill="url(#brandGrad)"/>
+        <circle r="2.2" fill="#ff3d7a" opacity="0.95">
+          <animateMotion dur="3.4s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+        <circle r="2" fill="#16a4ff" opacity="0.9">
+          <animateMotion dur="3.4s" begin=".5s" repeatCount="indefinite" path="M84,44 L322,44"/>
+        </circle>
+      </g>
+    </g>
+  </a>
+</svg>
