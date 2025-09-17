@@ -29,9 +29,9 @@
         </radialGradient>
         
         <!-- Minimal Blur Filter -->
-        <filter id="minBlurTT">
+        <!-- <filter id="minBlurTT">
             <feGaussianBlur stdDeviation="0.5"/>
-        </filter>
+        </filter> -->
     </defs>
     
     <!-- Background Fill with Core Energy -->
@@ -42,8 +42,7 @@
     <rect x="10" y="10" width="44" height="44" rx="8" 
           fill="none"
           stroke="#000000" 
-          stroke-width="2.5"
-          filter="url(#minBlurTT)">
+          stroke-width="2.5">
         <animate attributeName="stroke-width" 
                  values="2.5;3;2.5" 
                  dur="4s" 
@@ -64,7 +63,7 @@
                      repeatCount="indefinite"/>
         </path>
     </g>
-    
+
     <!-- Orbital Elements: Binary Particles -->
     <circle r="1.5" fill="#ff0a54">
         <animateMotion path="M 32 32 m -26 0 a 26 26 0 1 1 52 0 a 26 26 0 1 1 -52 0" 

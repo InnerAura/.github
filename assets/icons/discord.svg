@@ -29,9 +29,9 @@
         </radialGradient>
         
         <!-- Minimal Blur Filter -->
-        <filter id="minBlur">
+        <!-- <filter id="minBlur">
             <feGaussianBlur stdDeviation="0.5"/>
-        </filter>
+        </filter> -->
     </defs>
     
     <!-- Background Fill with Core Energy -->

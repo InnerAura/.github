@@ -29,9 +29,9 @@
         </radialGradient>
         
         <!-- Minimal Blur Filter -->
-        <filter id="minBlurX">
+        <!-- <filter id="minBlurX">
             <feGaussianBlur stdDeviation="0.5"/>
-        </filter>
+        </filter> -->
     </defs>
     
     <!-- Background Fill with Core Energy -->
@@ -42,14 +42,13 @@
     <rect x="10" y="10" width="44" height="44" rx="8" 
           fill="none"
           stroke="#000000" 
-          stroke-width="2.5"
-          filter="url(#minBlurX)">
+          stroke-width="2.5">
         <animate attributeName="stroke-width" 
                  values="2.5;3;2.5" 
                  dur="4s" 
                  repeatCount="indefinite"/>
     </rect>
-    
+
     <!-- X Glyph with Binary Gradient -->
     <g transform="translate(32, 32) scale(0.6) translate(-24, -24)">
         <path d="M37.802 2.306h7.36l-16.08 18.38L48 45.692h-14.812l-11.6-15.168L9.276 45.692H0.948l17.2-19.66L0 2.308h15.188l10.486 13.864ZM35.22 41.288h4.078L12.972 6.48H8.596Z" 

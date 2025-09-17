@@ -29,9 +29,9 @@
         </radialGradient>
         
         <!-- Minimal Blur Filter -->
-        <filter id="minBlurGH">
+        <!-- <filter id="minBlurGH">
             <feGaussianBlur stdDeviation="0.5"/>
-        </filter>
+        </filter> -->
     </defs>
     
     <!-- Background Fill with Core Energy -->
@@ -42,8 +42,7 @@
     <rect x="10" y="10" width="44" height="44" rx="8" 
           fill="none"
           stroke="#000000" 
-          stroke-width="2.5"
-          filter="url(#minBlurGH)">
+          stroke-width="2.5">
         <animate attributeName="stroke-width" 
                  values="2.5;3;2.5" 
                  dur="4s" 
