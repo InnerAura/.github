@@ -1,134 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <!-- Animated rotating gradient for border -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff3d7a">
-        <animate attributeName="stop-color" 
-                 values="#ff3d7a;#16a4ff;#ffbf2d;#ff3d7a" 
-                 dur="4s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <stop offset="33%" stop-color="#16a4ff">
-        <animate attributeName="stop-color" 
-                 values="#16a4ff;#ffbf2d;#ff3d7a;#16a4ff" 
-                 dur="4s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <stop offset="66%" stop-color="#ffbf2d">
-        <animate attributeName="stop-color" 
-                 values="#ffbf2d;#ff3d7a;#16a4ff;#ffbf2d" 
-                 dur="4s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#ff3d7a">
-        <animate attributeName="stop-color" 
-                 values="#ff3d7a;#16a4ff;#ffbf2d;#ff3d7a" 
-                 dur="4s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <animateTransform
-        attributeName="gradientTransform"
-        type="rotate"
-        values="0 32 32;360 32 32"
-        dur="8s"
-        repeatCount="indefinite"/>
-    </linearGradient>
-
-    <!-- Static gradient for icon fills -->
-    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff3d7a"/>
-      <stop offset="50%" stop-color="#16a4ff"/>
-      <stop offset="100%" stop-color="#ffbf2d"/>
-    </linearGradient>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="icon-wrapper">
+    <defs>
+        <!-- Binary Opposition Gradient System -->
+        <linearGradient id="binaryGradGH" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffffff">
+                <animate attributeName="stop-color" 
+                         values="#ffffff;#ff0a54;#ffffff" 
+                         dur="8s" 
+                         repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#000000">
+                <animate attributeName="stop-color" 
+                         values="#000000;#0affef;#000000" 
+                         dur="8s" 
+                         repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+        
+        <!-- Core Radial Energy Field -->
+        <radialGradient id="coreEnergyGH" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#ffffff" stop-opacity="1"/>
+            <stop offset="50%" style="stop-color:#845ef7" stop-opacity="0.5">
+                <animate attributeName="stop-opacity" 
+                         values="0.5;1;0.5" 
+                         dur="4s" 
+                         repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#000000" stop-opacity="0.1"/>
+        </radialGradient>
+        
+        <!-- Minimal Blur Filter -->
+        <filter id="minBlurGH">
+            <feGaussianBlur stdDeviation="0.5"/>
+        </filter>
+    </defs>
     
-    <!-- Pulse effect for background -->
-    <radialGradient id="pulseGrad">
-      <stop offset="0%" stop-color="#16a4ff" stop-opacity="0.3">
-        <animate attributeName="stop-opacity" 
-                 values="0.3;0.1;0.3" 
-                 dur="3s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#ff3d7a" stop-opacity="0">
-        <animate attributeName="stop-opacity" 
-                 values="0;0.2;0" 
-                 dur="3s" 
-                 repeatCount="indefinite"/>
-      </stop>
-    </radialGradient>
+    <!-- Background Fill with Core Energy -->
+    <rect x="10" y="10" width="44" height="44" rx="8" 
+          fill="url(#coreEnergyGH)" opacity="0.3"/>
     
-    <!-- Shimmer overlay -->
-    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3">
-        <animate attributeName="stop-opacity" 
-                 values="0;0.3;0" 
-                 dur="3s" 
-                 repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform"
-                        type="translate"
-                        values="-1 0;1 0;-1 0"
-                        dur="6s"
-                        repeatCount="indefinite"/>
-    </linearGradient>
-    
-    <!-- Glow filter -->
-    <!-- <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter> -->
-  </defs>
-  
-  <!-- Icon container -->
-  <g id="icon">
-    <!-- Animated background pulse -->
-    <rect x="10" y="10" width="44" height="44" rx="8"
-          fill="url(#pulseGrad)"
-          opacity="0.5"/>
-    
-    <!-- Icon background -->
-    <rect x="10" y="10" width="44" height="44" rx="8"
-          fill="url(#iconGrad)"
-          opacity="0.15"/>
-    
-    <!-- Animated gradient border -->
-    <rect x="10" y="10" width="44" height="44" rx="8"
+    <!-- Primary Border with Breathing Animation -->
+    <rect x="10" y="10" width="44" height="44" rx="8" 
           fill="none"
-          stroke="url(#borderGrad)"
+          stroke="#000000" 
           stroke-width="2.5"
-          stroke-linecap="round"
-          filter="url(#glow)">
-      <animate attributeName="stroke-width" 
-               values="2.5;3;2.5" 
-               dur="2s" 
-               repeatCount="indefinite"/>
+          filter="url(#minBlurGH)">
+        <animate attributeName="stroke-width" 
+                 values="2.5;3;2.5" 
+                 dur="4s" 
+                 repeatCount="indefinite"/>
     </rect>
     
-    <!-- GitHub icon (Octocat) -->
-    <g transform="translate(32, 32) scale(1.5) translate(-12, -12)">
-      <path fill-rule="evenodd" clip-rule="evenodd" 
-            d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" 
-            fill="url(#iconGrad)"
-            stroke="url(#iconGrad)" 
-            stroke-width="0.5"
-            stroke-linejoin="round"
-            opacity="0.9">
-        <animate attributeName="opacity" 
-                 values="0.9;1;0.9" 
-                 dur="4s" 
-                 repeatCount="indefinite"/>
-      </path>
+    <!-- GitHub Glyph with Binary Gradient -->
+    <g transform="translate(32, 32) scale(0.6) translate(-24, -24)">
+        <path d="M24 4C12.954 4 4 12.954 4 24c0 8.837 5.731 16.335 13.68 18.977.999.184 1.368-.433 1.368-.961 0-.474-.017-1.729-.027-3.394-5.563 1.209-6.736-2.682-6.736-2.682-.91-2.311-2.221-2.926-2.221-2.926-1.816-1.241.137-1.216.137-1.216 2.007.141 3.063 2.061 3.063 2.061 1.784 3.056 4.68 2.174 5.82 1.662.182-1.292.698-2.174 1.269-2.673-4.439-.505-9.106-2.219-9.106-9.876 0-2.181.779-3.966 2.057-5.364-.206-.506-.892-2.538.196-5.291 0 0 1.678-.537 5.495 2.049A19.16 19.16 0 0124 13.714c1.699.008 3.41.229 5.005.673 3.814-2.586 5.49-2.049 5.49-2.049 1.09 2.753.404 4.785.198 5.291 1.28 1.398 2.055 3.183 2.055 5.364 0 7.676-4.674 9.366-9.126 9.861.717.618 1.357 1.838 1.357 3.704 0 2.673-.024 4.83-.024 5.486 0 .533.36 1.154 1.375.959C38.273 40.33 44 32.834 44 24c0-11.046-8.954-20-20-20z"
+              fill="none" 
+              stroke="url(#binaryGradGH)" 
+              stroke-width="2" 
+              stroke-linecap="round"
+              stroke-linejoin="round">
+            <animate attributeName="opacity" 
+                     values="0.8;1;0.8" 
+                     dur="4s" 
+                     repeatCount="indefinite"/>
+        </path>
     </g>
     
-    <!-- Shimmer overlay -->
-    <rect x="10" y="10" width="44" height="44" rx="8"
-          fill="url(#shimmer)"
-          pointer-events="none"
-          opacity="0.4"/>
-  </g>
+    <!-- Orbital Elements: Binary Particles -->
+    <circle r="1.5" fill="#ff0a54">
+        <animateMotion path="M 32 32 m -26 0 a 26 26 0 1 1 52 0 a 26 26 0 1 1 -52 0" 
+                       dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5" fill="#0affef">
+        <animateMotion path="M 32 32 m -26 0 a 26 26 0 1 0 52 0 a 26 26 0 1 0 -52 0" 
+                       dur="12s" repeatCount="indefinite"/>
+    </circle>
 </svg>
