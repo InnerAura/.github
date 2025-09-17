@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/minimal-essence-circular-motion.svg" alt="InnerAurora Labs Logo" align="left" width="120">](https://innerauroralabs.com)
+[<img src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/minimal-essence-circular-motion.svg" alt="InnerAurora Labs Logo" align="left" width="120">](https://innerauroralabs.com)
 
 ## &nbsp;&nbsp;InnerAurora Labs
 
@@ -40,7 +40,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   <!-- Social Icons -->
   <a href="https://github.com/InnerAurora/hyperweave">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/hyperweave.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/hyperweave.svg"
       width="8%"
       alt="Try HyperWeave"
       >
@@ -48,7 +48,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://discord.gg/wVmcAZPQZ8">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/discord.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/discord.svg"
       width="8%"
       alt="Join us on Discord"
       >
@@ -56,7 +56,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://www.instagram.com/hyperweave.ai/">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/instagram.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/instagram.svg"
       width="8%"
       alt="Instagram"
       >
@@ -65,7 +65,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   <a href="https://www.linkedin.com/in/elisalamie/">
   <!-- <a href="https://www.linkedin.com/company/innerauroralabs/"> -->
     <img
-    src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/linkedin.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/linkedin.svg"
     width="8%"
     alt="LinkedIn"
     >
@@ -73,7 +73,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://www.tiktok.com/@hyperweave.ai">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/tiktok.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/tiktok.svg"
       width="8%"
       alt="TikTok"
       >
@@ -81,7 +81,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://x.com/InnerAuroraLabs">
     <img
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/x.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/x.svg"
       width="8%"
       alt="X"
     >
@@ -89,7 +89,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
   &nbsp;
   <a href="https://www.youtube.com/@InnerAuroraLabs">
     <img 
-      src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/icons/youtube.svg"
+      src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/youtube.svg"
       width="8%"
       alt="YouTube"
       >
@@ -97,7 +97,7 @@ Join the `InnerAurora` community to contribute to the vision. Whether you're a d
 </p>
 
 <img
-    src="https://raw.githubusercontent.com/InnerAurora/.github/3b8a82f7aa604e9e656ae70b66ea1be569c1ff88/assets/geometric-thematic-break.svg"
+    src="https://raw.githubusercontent.com/InnerAurora/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/geometric-thematic-break.svg"
     alt="Thematic Break"
     width="100%"
     height="auto"
