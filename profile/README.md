@@ -1,8 +1,8 @@
 [<img src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/minimal-essence-circular-motion.svg" alt="InnerAura Labs Logo" align="left" width="120">](https://innerAuralabs.com)
 
-## &nbsp;&nbsp;InnerAura Labs
+## InnerAura Labs
 
-&nbsp;&nbsp; *Building AI systems for true human-AI collaboration*
+*Building AI systems for true human-AI collaboration*
 
 <br clear="left"/>
 
