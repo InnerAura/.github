@@ -62,8 +62,7 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
       >
   </a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/elisalamie/">
-  <!-- <a href="https://www.linkedin.com/company/innerAuralabs/"> -->
+  <a href="https://www.linkedin.com/company/inneraura">
     <img
     src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/linkedin.svg"
     width="8%"
