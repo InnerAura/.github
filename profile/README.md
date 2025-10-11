@@ -126,7 +126,7 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
 [hyperweave]: https://github.com/InnerAura/hyperweave
 [discord]: https://discord.gg/wVmcAZPQZ8
 [instagram]: https://www.instagram.com/hyperweave.ai/
-[linkedin]: https://www.linkedin.com/company/innerAuralabs/
+[linkedin]: https://www.linkedin.com/company/inneraura
 [tiktok]: https://www.tiktok.com/@hyperweave.ai
-[x]: https://x.com/InnerAuraLabss
+[x]: https://x.com/InnerAuraLabs
 [youtube]: https://www.youtube.com/@InnerAuraLabs
