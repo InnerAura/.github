@@ -2,7 +2,7 @@
 
 ## InnerAura Labs
 
-*Building AI systems for true human-AI collaboration*
+*Building intelligent mirrors for human and AI creativity*
 
 <br clear="left"/>
 
