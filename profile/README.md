@@ -35,6 +35,15 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
 
 <br />
 
+<p align="center">
+<img
+    src="./assets/brand/minimal-essence-hero.svg"
+    alt="InnerAura Labs Hero Image"
+    width="100%"
+    height="auto"
+/>
+</p>
+
 <!-- FOOTER: SOCIAL RIBBONS -->
 <p align="center">
   <!-- Social Icons -->
@@ -118,8 +127,6 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
   <area shape="rect" coords="500,196,860,260" href="https://github.com/InnerAura/hyperweave" alt="Docs & Guides" />
 </map>
 -->
-
----
 
 <!-- REFERENCE LINKS -->
 [hyperweave]: https://github.com/InnerAura/hyperweave
