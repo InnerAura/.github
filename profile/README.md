@@ -37,7 +37,7 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
 
 <p align="center">
 <img
-    src="./assets/brand/minimal-essence-hero.svg"
+    src="https://raw.githubusercontent.com/InnerAura/.github/b0ca03334a4a41879b0d52dac69dce0e5b672fb7/assets/brand/minimal-essence-hero.svg"
     alt="InnerAura Labs Hero Image"
     width="100%"
     height="auto"
