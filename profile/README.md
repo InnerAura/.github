@@ -1,8 +1,8 @@
-[<img src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/minimal-essence-circular-motion.svg" alt="InnerAura Labs Logo" align="left" width="120">](https://innerAuralabs.com)
+[<img src="https://raw.githubusercontent.com/InnerAura/.github/main/assets/icons/inneraura_felt_star.svg" alt="InnerAura Labs Logo" align="left" width="100">](https://innerAuralabs.com)
 
-## InnerAura Labs
+## InnerAura
 
-*Building intelligent mirrors for human and AI creativity*
+*Visual Infrastructure for Agents*
 
 <br clear="left"/>
 
@@ -35,81 +35,19 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
 
 <br />
 
-<p align="center">
-<img
-    src="https://raw.githubusercontent.com/InnerAura/.github/b0ca03334a4a41879b0d52dac69dce0e5b672fb7/assets/brand/minimal-essence-hero.svg"
-    alt="InnerAura Labs Hero Image"
-    width="100%"
-    height="auto"
-/>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InnerAura/.github/main/assets/footers/inneraura_felt_footer.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/InnerAura/.github/main/assets/footers/inneraura_felt_footer.svg">
+  <img alt="InnerAura Labs" src="https://raw.githubusercontent.com/InnerAura/.github/main/assets/footers/inneraura_felt_footer.svg" width="100%">
+</picture>
 
 <!-- FOOTER: SOCIAL RIBBONS -->
-<p align="center">
-  <!-- Social Icons -->
-  <a href="https://github.com/InnerAura/hyperweave">
-    <img
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/hyperweave.svg"
-      width="8%"
-      alt="Try HyperWeave"
-      >
-  </a>
-  &nbsp;
-  <a href="https://discord.gg/wVmcAZPQZ8">
-    <img
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/discord.svg"
-      width="8%"
-      alt="Join us on Discord"
-      >
-  </a>
-  &nbsp;
-  <a href="https://www.instagram.com/hyperweave.ai/">
-    <img
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/instagram.svg"
-      width="8%"
-      alt="Instagram"
-      >
-  </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/company/inneraura">
-    <img
-    src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/linkedin.svg"
-    width="8%"
-    alt="LinkedIn"
-    >
-  </a>
-  &nbsp;
-  <a href="https://www.tiktok.com/@hyperweave.ai">
-    <img
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/tiktok.svg"
-      width="8%"
-      alt="TikTok"
-      >
-  </a>
-  &nbsp;
-  <a href="https://x.com/InnerAuraLabs">
-    <img
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/x.svg"
-      width="8%"
-      alt="X"
-    >
-  </a>
-  &nbsp;
-  <a href="https://www.youtube.com/@InnerAuraLabs">
-    <img 
-      src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/icons/youtube.svg"
-      width="8%"
-      alt="YouTube"
-      >
-  </a>
-</p>
 
-<img
-    src="https://raw.githubusercontent.com/InnerAura/.github/644674e294ae9e44e5fcab7748bcfe9a10caf6a5/assets/geometric-thematic-break.svg"
-    alt="Thematic Break"
-    width="100%"
-    height="auto"
-/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InnerAura/.github/main/assets/dividers/inneraura_felt_divider.dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/InnerAura/.github/main/assets/dividers/inneraura_felt_divider.light.svg">
+  <img alt="InnerAura Labs" src="https://raw.githubusercontent.com/InnerAura/.github/main/assets/dividers/inneraura_felt_divider.light.svg" width="100%">
+</picture>
 
 <!-- GITHUB README VERSION — single image + image map (aligned rows, full-card hitboxes)
 <img
@@ -136,3 +74,4 @@ Join the `InnerAura` community to contribute to the vision. Whether you're a dev
 [tiktok]: https://www.tiktok.com/@hyperweave.ai
 [x]: https://x.com/InnerAuraLabs
 [youtube]: https://www.youtube.com/@InnerAuraLabs
+>

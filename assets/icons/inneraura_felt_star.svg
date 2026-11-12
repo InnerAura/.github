@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" width="224" height="224" role="img" aria-labelledby="t d"><title id="t">InnerAura star</title><desc id="d">The InnerAura star in raised cobalt felt, on a transparent ground.</desc><defs><filter id="xf" filterUnits="userSpaceOnUse" x="-28" y="-28" width="280" height="280" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.45 0.135" numOctaves="3" seed="11" result="fa"/>
+<feTurbulence type="turbulence" baseFrequency="0.135 0.45" numOctaves="3" seed="29" result="fb"/>
+<feTurbulence type="turbulence" baseFrequency="0.279" numOctaves="2" seed="47" result="fc"/>
+<feColorMatrix in="fa" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1" result="faO"/><feColorMatrix in="fb" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1" result="fbO"/><feColorMatrix in="fc" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1" result="fcO"/>
+<feComposite in="faO" in2="fbO" operator="arithmetic" k2=".5" k3=".5" result="fab"/>
+<feComposite in="fab" in2="fcO" operator="arithmetic" k2=".62" k3=".38" result="fibers"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="5" result="clR"/><feColorMatrix in="clR" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1" result="clRO"/>
+<feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="8" result="edgeN"/>
+<feDisplacementMap in="SourceGraphic" in2="edgeN" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="rag"/>
+<feTurbulence type="turbulence" baseFrequency="0.720" numOctaves="2" seed="61" result="hairN"/>
+<feDisplacementMap in="rag" in2="hairN" scale="3.52" xChannelSelector="G" yChannelSelector="B" result="patch"/>
+<feColorMatrix in="patch" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="patchA"/>
+<feColorMatrix in="patchA" values="0 0 0 1 0  0 0 0 1 0  0 0 0 1 0  0 0 0 0 1" result="patchW"/>
+<feGaussianBlur in="patchW" stdDeviation="2.8" result="bump"/>
+<feComposite in="fibers" in2="clRO" operator="arithmetic" k2=".2" k3=".14" result="nap"/>
+<feComposite in="nap" in2="bump" operator="arithmetic" k2="1" k3=".62" k4=".18" result="hRGB"/>
+<feColorMatrix in="hRGB" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="height"/>
+<feDiffuseLighting in="height" surfaceScale="7" diffuseConstant="1.05" lighting-color="#fff" result="lit">
+<feDistantLight azimuth="235" elevation="40"/></feDiffuseLighting>
+<feComponentTransfer in="lit" result="col"><feFuncR type="table" tableValues="0.010 0.030 0.060 0.100 0.150 0.320 0.700"/>
+<feFuncG type="table" tableValues="0.020 0.050 0.110 0.190 0.270 0.450 0.800"/><feFuncB type="table" tableValues="0.120 0.260 0.500 0.720 0.860 0.970 1.000"/></feComponentTransfer>
+<feGaussianBlur in="patchA" stdDeviation="3" result="shB"/><feOffset in="shB" dx="2" dy="3.4" result="shO"/>
+<feColorMatrix in="shO" values="0 0 0 0 .05  0 0 0 0 .08  0 0 0 0 .28  0 0 0 .40 0" result="shadow"/>
+<feComposite in="col" in2="patchA" operator="in" result="blue"/>
+<feComposite in="blue" in2="shadow" operator="over"/>
+</filter><filter id="xl0" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.014 0.62" numOctaves="2" seed="200" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.12" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="203" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#050B3A" flood-opacity="0.600"/><feComposite in2="lineP" operator="in"/></filter><filter id="xh0" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.012 0.55" numOctaves="2" seed="100" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.2" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="103" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#A9BFFF" flood-opacity="0.450"/><feComposite in2="lineP" operator="in"/></filter><filter id="xl1" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.014 0.62" numOctaves="2" seed="201" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.12" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="204" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#050B3A" flood-opacity="0.600"/><feComposite in2="lineP" operator="in"/></filter><filter id="xh1" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.012 0.55" numOctaves="2" seed="101" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.2" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="104" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#A9BFFF" flood-opacity="0.450"/><feComposite in2="lineP" operator="in"/></filter><filter id="xl2" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.014 0.62" numOctaves="2" seed="202" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.12" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="205" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#050B3A" flood-opacity="0.600"/><feComposite in2="lineP" operator="in"/></filter><filter id="xh2" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.012 0.55" numOctaves="2" seed="102" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.2" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="105" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#A9BFFF" flood-opacity="0.450"/><feComposite in2="lineP" operator="in"/></filter><filter id="xl3" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.014 0.62" numOctaves="2" seed="203" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.12" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="206" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#050B3A" flood-opacity="0.600"/><feComposite in2="lineP" operator="in"/></filter><filter id="xh3" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="turbulence" baseFrequency="0.012 0.55" numOctaves="2" seed="103" result="t"/>
+<feColorMatrix in="t" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 1.2" result="line"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="106" result="pat"/>
+<feColorMatrix in="pat" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.2 0 0 0 -.55" result="patA"/>
+<feComposite in="line" in2="patA" operator="arithmetic" k1="1" k2=".35" result="lineP"/>
+<feFlood flood-color="#A9BFFF" flood-opacity="0.450"/><feComposite in2="lineP" operator="in"/></filter><mask id="xm" maskUnits="userSpaceOnUse" x="0" y="0" width="224" height="224"><path d="M152.0,26.0L148.2,72.0L221.1,60.4L146.5,112.1L131.1,179.0L98.7,146.5L2.9,198.0L71.7,119.6L31.5,98.7L108.0,79.4Z" fill="#fff" fill-rule="evenodd"/></mask></defs><g filter="url(#xf)"><path d="M152.0,26.0L148.2,72.0L221.1,60.4L146.5,112.1L131.1,179.0L98.7,146.5L2.9,198.0L71.7,119.6L31.5,98.7L108.0,79.4Z" fill="#fff" fill-rule="evenodd"/></g><g mask="url(#xm)"><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xl0)" transform="rotate(31 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xh0)" transform="rotate(8 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xl1)" transform="rotate(75 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xh1)" transform="rotate(52 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xl2)" transform="rotate(120 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xh2)" transform="rotate(97 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xl3)" transform="rotate(164 112.0 112.0)"/><rect x="-66.4" y="-66.4" width="356.8" height="356.8" filter="url(#xh3)" transform="rotate(141 112.0 112.0)"/></g></svg>
